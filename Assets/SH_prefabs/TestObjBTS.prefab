@@ -1630,7 +1630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a073b4b4d41d241a446e554ac89f2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxVideoDoodle: 50
+  MaxVideoDoodle: 18
   doodleFactory: {fileID: 7877961540993914772, guid: 34ed75e16f0831e4a9b0c42322340c2b, type: 3}
   trans:
   - {fileID: 1411311187}
@@ -1663,7 +1663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00a5eb8c12c22b488a37d5747e5bd28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxImgaeDoodle: 50
+  MaxImgaeDoodle: 18
   doodleFactory: {fileID: 7624479049061241053, guid: 246fc53ccfbe7b04192a3b058bda530b, type: 3}
   trans:
   - {fileID: 1201507177}

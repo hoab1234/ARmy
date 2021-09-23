@@ -479,7 +479,6 @@ GameObject:
   - component: {fileID: 7342660354739552376}
   - component: {fileID: 7342660354739552379}
   - component: {fileID: 488208517351267228}
-  - component: {fileID: 4896029138263068656}
   - component: {fileID: 1663034200113904082}
   - component: {fileID: 469234040442081670}
   m_Layer: 0
@@ -618,19 +617,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayBtn: {fileID: 5717973833723733804}
   PauseBtn: {fileID: 3970960313751994102}
-  vpState: 0
---- !u!114 &4896029138263068656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7342660354739552378}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a4d6993f1e356844b89bc2602c3dc55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1663034200113904082
 MonoBehaviour:
   m_ObjectHideFlags: 0
