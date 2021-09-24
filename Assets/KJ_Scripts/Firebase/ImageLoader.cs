@@ -17,6 +17,7 @@ public class ImageLoader : MonoBehaviour
 {
     public static ImageLoader instance;
     public int MaxImgaeDoodle = 50;
+   
     public void Awake()
     {
         if (instance == null)
@@ -32,7 +33,6 @@ public class ImageLoader : MonoBehaviour
     Texture2D texture;
     public GameObject doodleFactory;
 
-    int doodlehigh = 5;
 
     List<string> ImageDoodleTextList;
     List<StorageReference> doodleImgs;
@@ -45,7 +45,15 @@ public class ImageLoader : MonoBehaviour
             isUseTrans[i] = false;
         }
         storage = FirebaseStorage.DefaultInstance;
-        storageReference = storage.GetReferenceFromUrl("gs://airy-907b8.appspot.com/");
+
+
+
+        //첫번째 스토리지
+        //storageReference = storage.GetReferenceFromUrl("gs://airy-907b8.appspot.com/");
+
+        //두번째 스토리지
+        storageReference = storage.GetReferenceFromUrl("gs://army2-84bb3.appspot.com");
+
         doodleImgs = new List<StorageReference>();
 
     }
@@ -95,12 +103,12 @@ public class ImageLoader : MonoBehaviour
         print("loadimage func start");
         GameObject doodle = Instantiate(doodleFactory);
         doodle.GetComponentInChildren<MeshRenderer>().material.mainTexture = texture;
-       
         if(isUseTrans[index] == false)
         {
 
             doodle.transform.position = trans[index].transform.position;
             doodle.transform.parent = trans[index];
+            doodle.GetComponent<Doodle>().setParent(trans[index].gameObject);
             isUseTrans[index] = true;
             index++;
         }

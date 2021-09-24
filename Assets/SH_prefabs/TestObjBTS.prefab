@@ -1664,6 +1664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxImgaeDoodle: 18
+  cubeFiter: {fileID: 2894689209136417010, guid: a51bda76f9df65e438128faaf4bdc915, type: 3}
   doodleFactory: {fileID: 7624479049061241053, guid: 246fc53ccfbe7b04192a3b058bda530b, type: 3}
   trans:
   - {fileID: 1201507177}

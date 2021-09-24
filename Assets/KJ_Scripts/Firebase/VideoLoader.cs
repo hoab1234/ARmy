@@ -46,7 +46,13 @@ public class VideoLoader : MonoBehaviour
         }
 
         storage = FirebaseStorage.DefaultInstance;
-        storageReference = storage.GetReferenceFromUrl("gs://airy-907b8.appspot.com/");
+        
+        //첫번째 스토리지
+        //storageReference = storage.GetReferenceFromUrl("gs://airy-907b8.appspot.com/");
+
+        //두번째 스토리지
+        storageReference = storage.GetReferenceFromUrl("gs://army2-84bb3.appspot.com");
+
         doodleVideos = new List<StorageReference>();
 
         //StorageReference SampleVideo = storageReference.Child("/VideoDoodle/SampleVideo.mp4");
@@ -104,23 +110,24 @@ public class VideoLoader : MonoBehaviour
     bool[] isUseTrans;
     int index = 0;
     string videoDoodleText;
+
     IEnumerator LoadVideo(string MediaUrl,string VideoDoodleTextDown)
     {
         UnityWebRequest request = UnityWebRequest.Get(MediaUrl);
 
         yield return request.SendWebRequest(); //Wait for the request to complete
 
-        GameObject doodle = Instantiate(doodleFactory);
-        doodle.transform.position = transform.position + new Vector3(-3, doodlehigh--, 0);
+       
         VideoPlayer vp;
+        GameObject doodle = Instantiate(doodleFactory);
         vp = doodle.GetComponentInChildren<VideoPlayer>();
         vp.url = request.url;
 
         if (isUseTrans[index] == false)
         {
-
             doodle.transform.position = trans[index].transform.position;
             doodle.transform.parent = trans[index];
+            doodle.GetComponent<Doodle>().setParent(trans[index].gameObject);
             isUseTrans[index] = true;
             index++;
         }

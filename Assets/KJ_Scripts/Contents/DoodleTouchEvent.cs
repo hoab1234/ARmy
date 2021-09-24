@@ -21,42 +21,52 @@ public class DoodleTouchEvent : MonoBehaviour
     public float lerpSpeed = 3f;
     void Start()
     {
-        
+
         //StartCoroutine("TouchDoodle");
     }
     VideoToogleBtn videotoogleBtn;
     // Update is called once per frame
     GameObject tempobj;
     Vector3 tempVector3;
+
+    Transform tempParentsT;
+    GameObject tempParent;
+    IEnumerator CameraTrack() {
+        yield return new WaitForSeconds(.2f);
+        tempobj.transform.position = pos.transform.position;
+    }
+
     void Update()
     {
-        if(cameraFocus)
+        if (cameraFocus)
         {
-            //tempobj.transform.position = pos.transform.position;
-            doodle.transform.position = pos.transform.position;
+            
+            //tempobj.transform.DOMove(pos.transform.position, 0.01f, false);
+            //tempobj.transform.position = pos.transform.position;//lerp로 바꿀것 or vector3.toward
+            //doodle.transform.position = pos.transform.position;
         }
-        
 
-        #if UNITY_EDITOR
-        if (  Input.GetButtonDown("Fire1"))
+
+#if UNITY_EDITOR
+        if (Input.GetButtonDown("Fire1"))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitinfo;
             if (Physics.Raycast(ray, out hitinfo))
             {
-                
-                    if (hitinfo.transform.CompareTag("DOODLE"))
-                    {
-                    if (!alreadyFocus || hitinfo.transform.GetComponent<VideoToogleBtn>()!=null)
+
+                if (hitinfo.transform.CompareTag("DOODLE"))
+                {
+                    if (!alreadyFocus || hitinfo.transform.GetComponent<VideoToogleBtn>() != null)
                     {
                         tempobj = hitinfo.transform.gameObject;
-                        if (! alreadyFocus)
-                        { 
-                            tempVector3 = hitinfo.transform.transform.position;
+                        if (!alreadyFocus)
+                        {
+                            hitinfo.transform.gameObject.GetComponent<Doodle>().GoToCamera();
                             StartCoroutine("XiconOn");
                         }
                         alreadyFocus = true;
-                        tempobj.transform.DOMove(pos.transform.position, 1f, false);
+
                         videotoogleBtn = hitinfo.transform.GetComponent<VideoToogleBtn>();
                         if (isVideoFocus && videotoogleBtn != null) // video doodle
                         {
@@ -75,8 +85,8 @@ public class DoodleTouchEvent : MonoBehaviour
                 }
             }
         }
-      
-        #endif
+
+#endif
 
 #if UNITY_ANDROID
         if (Input.touchCount > 0)
@@ -88,7 +98,7 @@ public class DoodleTouchEvent : MonoBehaviour
         RaycastHit hit;
         //DebugUI.instance.UpdateDebugForGm("touch ray");
 
-       
+
 
         if (Input.touchCount > 0 && touch.phase == TouchPhase.Began && Physics.Raycast(touchRay, out hit))
         {
@@ -100,15 +110,14 @@ public class DoodleTouchEvent : MonoBehaviour
                     doodle = hit.transform.gameObject;
                     if (!alreadyFocus)
                     {
-                        tempVector3 = hit.transform.transform.position;
                         StartCoroutine("XiconOn");
+                        hit.transform.gameObject.GetComponent<Doodle>().GoToCamera();
                     }
                     alreadyFocus = true;
-                    doodle.transform.DOMove(pos.transform.position, 1f, false);
 
                     videotoogleBtn = hit.transform.GetComponent<VideoToogleBtn>();
-                    
-                    if ( isVideoFocus && videotoogleBtn != null) // video doodle
+
+                    if (isVideoFocus && videotoogleBtn != null) // video doodle
                     {
                         if (!isPlaying)
                         {
@@ -129,22 +138,21 @@ public class DoodleTouchEvent : MonoBehaviour
 
             }
         }
-        #endif
+#endif
+       
+      
+
     }
-    
     bool isVideoFocus = false;
     bool cameraFocus = false;
     IEnumerator XiconOn()
     {
-        print("icobn on -------");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.2f);
         UIManager.instance.UiIconXOn();
         isVideoFocus = true;
-        cameraFocus = true;
-        
     }
-    
-    
+
+
     public void ClickXicon()
     {
         //�̸� �ڸ��� ���ư���
@@ -153,15 +161,16 @@ public class DoodleTouchEvent : MonoBehaviour
         alreadyFocus = false;
         isVideoFocus = false;
         UIManager.instance.UiIconXOff();
-        cameraFocus = false;
         if (videotoogleBtn != null)
         {
             videotoogleBtn.GetComponent<VideoPlayer>().Stop();
             videotoogleBtn.xIconClicked = true;
         }
-        //tempobj.transform.DOMove(tempVector3, 1f, false);
-        doodle.transform.DOMove(tempVector3, 1f, false);
+        tempobj.GetComponent<Doodle>().GoBack();
+       
     }
+
+    
 }
 
 
