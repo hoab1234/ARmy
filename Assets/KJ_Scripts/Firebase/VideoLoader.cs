@@ -48,10 +48,10 @@ public class VideoLoader : MonoBehaviour
         storage = FirebaseStorage.DefaultInstance;
         
         //첫번째 스토리지
-        //storageReference = storage.GetReferenceFromUrl("gs://airy-907b8.appspot.com/");
+        storageReference = storage.GetReferenceFromUrl("gs://airy-907b8.appspot.com/");
 
         //두번째 스토리지
-        storageReference = storage.GetReferenceFromUrl("gs://army2-84bb3.appspot.com");
+        //storageReference = storage.GetReferenceFromUrl("gs://army2-84bb3.appspot.com");
 
         doodleVideos = new List<StorageReference>();
 

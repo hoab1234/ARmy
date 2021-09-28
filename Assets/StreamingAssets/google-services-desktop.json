@@ -1,21 +1,21 @@
 {
   "project_info": {
     //첫번째 프젝
-    // "project_number": "597927559641",
-    //"project_id": "airy-907b8",
+     "project_number": "597927559641",
+    "project_id": "airy-907b8",
 
 
     //첫번재 스토리지
-    //"firebase_url":"https://airy-907b8-default-rtdb.firebaseio.com/",
-    //"storage_bucket": "airy-907b8.appspot.com"
+    "firebase_url":"https://airy-907b8-default-rtdb.firebaseio.com/",
+    "storage_bucket": "airy-907b8.appspot.com"
 
     //두번재 프젝
-    "project_number": "1022476798882",
-    "project_id": "army2-84bb3",
+    //"project_number": "1022476798882",
+    //"project_id": "army2-84bb3",
 
     //두번쨰 스토리지
-    "firebase_url": "https://army2-84bb3-default-rtdb.asia-southeast1.firebasedatabase.app/",
-    "storage_bucket": "army2-84bb3.appspot.com"
+    //"firebase_url": "https://army2-84bb3-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    //"storage_bucket": "army2-84bb3.appspot.com"
 
   },
   "client": [

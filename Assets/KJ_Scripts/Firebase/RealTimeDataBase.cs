@@ -21,14 +21,14 @@ public class RealTimeDataBase : MonoBehaviour
     }
 
 
-    public int ImgNum = 0; //  REAL TIME DB¿¡ ÀúÀåµÈ ÀÌ¹ÌÁö °¹¼ö ´ãÀ» º¯¼ö
-    public int VideoNum = 0; // REALTIME DB¿¡ ÀúÀåµÈ ºñµð¿À °¹¼ö ´ãÀ» º¯¼ö
+    public int ImgNum = 0; //  REAL TIME DBï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    public int VideoNum = 0; // REALTIME DBï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     // Start is called before the first frame update
     void Start()
     {
         DebugUI.instance.UpdateDebugForGm("getcontentsNum");
-        //google json¿¡ dbÁÖ¼Ò ³ÖÀº°Å°¡ RootReference·Î ÂüÁ¶µÇ´Â µí
+        //google jsonï¿½ï¿½ dbï¿½Ö¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Å°ï¿½ RootReferenceï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½
         reference = FirebaseDatabase.DefaultInstance.RootReference;
         GetVideoNum();
         GetImageNum();
@@ -39,7 +39,7 @@ public class RealTimeDataBase : MonoBehaviour
     public void GetImageNum()
     {
         DebugUI.instance.UpdateDebugForImg("getimagenum start");
-        FirebaseDatabase.DefaultInstance // realtime db¿¡¼­ ÀÌ¹ÌÁö ÀúÀå °¹¼ö µ¥ÀÌÅÍ °¡Á®¿È
+        FirebaseDatabase.DefaultInstance // realtime dbï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     .GetReference("ImageNum")
     .GetValueAsync().ContinueWith(task =>
     {
@@ -60,7 +60,7 @@ public class RealTimeDataBase : MonoBehaviour
     });
     }
 
-    public void GetVideoNum() // realtime db¿¡¼­ ºñµð¿À ÀúÀå °¹¼ö µ¥ÀÌÅÍ °¡Á®¿È
+    public void GetVideoNum() // realtime dbï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     {
         DebugUI.instance.UpdateDebugForVideo("getVideoNum start");
         FirebaseDatabase.DefaultInstance
