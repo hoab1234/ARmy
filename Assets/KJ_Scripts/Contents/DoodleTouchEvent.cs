@@ -62,6 +62,8 @@ public class DoodleTouchEvent : MonoBehaviour
                         tempobj = hitinfo.transform.gameObject;
                         if (!alreadyFocus)
                         {
+                           
+                            hitinfo.transform.gameObject.GetComponent<Doodle>().EnableToggleBillborad(true);
                             hitinfo.transform.gameObject.GetComponent<Doodle>().GoToCamera();
                             StartCoroutine("XiconOn");
                         }
@@ -110,6 +112,7 @@ public class DoodleTouchEvent : MonoBehaviour
                     doodle = hit.transform.gameObject;
                     if (!alreadyFocus)
                     {
+                        hit.transform.gameObject.GetComponent<Doodle>().EnableToggleBillborad(true);
                         StartCoroutine("XiconOn");
                         hit.transform.gameObject.GetComponent<Doodle>().GoToCamera();
                     }
@@ -130,12 +133,8 @@ public class DoodleTouchEvent : MonoBehaviour
                             isPlaying = false;
                         }
                     }
-                    else
-                    { // image doodle
-
-                    }
+                   
                 }
-
             }
         }
 #endif
@@ -166,8 +165,14 @@ public class DoodleTouchEvent : MonoBehaviour
             videotoogleBtn.GetComponent<VideoPlayer>().Stop();
             videotoogleBtn.xIconClicked = true;
         }
+/*#if UNITY_EDITOR
         tempobj.GetComponent<Doodle>().GoBack();
-       
+        tempobj.GetComponent<Doodle>().EnableToggleBillborad(false);
+#endif*/
+#if UNITY_ANDROID
+        doodle.GetComponent<Doodle>().GoBack();
+        doodle.GetComponent<Doodle>().EnableToggleBillborad(false);
+#endif
     }
 
     

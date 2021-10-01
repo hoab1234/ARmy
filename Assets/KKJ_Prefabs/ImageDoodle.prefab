@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 7578585659214799267}
   - component: {fileID: 9085879629125042236}
   - component: {fileID: 306245524124020771}
+  - component: {fileID: 7100092923633907412}
   m_Layer: 0
   m_Name: ImageDoodle
   m_TagString: DOODLE
@@ -281,6 +282,18 @@ MonoBehaviour:
   - {fileID: 2800000, guid: d05827f607ed0d64ab244dda962f1fa5, type: 3}
   - {fileID: 2800000, guid: 495f81dde95bdc248ae353994c5ebb39, type: 3}
   - {fileID: 2800000, guid: b43b75729934f8f42bc45dfa50261844, type: 3}
+--- !u!114 &7100092923633907412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2439803074629977325}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf5ba816ef6533943a5757d8af236ac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4282395654670581946
 GameObject:
   m_ObjectHideFlags: 0

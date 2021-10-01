@@ -57,7 +57,6 @@ public class Doodle : MonoBehaviour
     {
         this.parent = parent;
     }
-
     public void GoBack()
     {
         transform.DOMove(parent.transform.position, 1f, false);
@@ -67,6 +66,7 @@ public class Doodle : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         transform.parent = parent.transform;
+        setDir();
     }
     public void GoToCamera()
     {
@@ -78,6 +78,8 @@ public class Doodle : MonoBehaviour
     IEnumerator PARENTISCAMERA()
     {
         yield return new WaitForSeconds(1f);
+        transform.localPosition = Vector3.zero;
+
     }
     public void setDir()
     {
@@ -123,6 +125,16 @@ public class Doodle : MonoBehaviour
         index = getRandomNum();
         return index; 
     }
+
+    public void EnableToggleBillborad(bool tempbool)
+    {
+        if (tempbool)
+            gameObject.GetComponent<Billboard>().enabled = true;
+        else
+            gameObject.GetComponent<Billboard>().enabled = false;
+    }
+
+
 }
 
 

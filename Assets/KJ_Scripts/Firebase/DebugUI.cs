@@ -10,6 +10,7 @@ public class DebugUI : MonoBehaviour
     public Text Imagedebug;
     public Text VideoDebug;
     public Text GmDebug;
+    public Text posDebug;
     private void Awake()
     {
         if (instance == null)
@@ -18,9 +19,14 @@ public class DebugUI : MonoBehaviour
         }
     }
 
+    public void UpdateDebugForPos(string text)
+    {
 
+        posDebug.text = text;
+
+    }
     // Start is called before the first frame update
-    
+
     public void UpdateDebugForImg(string text)
     {
 

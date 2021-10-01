@@ -127,6 +127,7 @@ public class VideoLoader : MonoBehaviour
         doodle.transform.parent = trans[index];
         doodle.transform.localPosition = Vector3.zero;
         doodle.GetComponent<Doodle>().setDir();
+        doodle.GetComponent<Doodle>().setParent(trans[index].gameObject);
 
 
         DebugUI.instance.UpdateDebugForVideo("load video execute");

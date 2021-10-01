@@ -120,6 +120,7 @@ public class ImageLoader : MonoBehaviour
             print("Check1");
             doodle.transform.parent = trans[index];
             doodle.transform.localPosition = Vector3.zero;
+            doodle.GetComponent<Doodle>().setParent(trans[index].gameObject);
             doodle.GetComponent<Doodle>().setDir();
            
             //doodle.transform.parent = trans[index];

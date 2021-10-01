@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "2173d2e0070d7ece",
         "name": "com.AIRY.AIRY101",
-        "processId": 13472,
+        "processId": 12652,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,169 +11,79 @@
         {
             "deviceId": "2173d2e0070d7ece",
             "name": "com.AIRY.AIRY101",
-            "processId": 31124,
-            "exited": true
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.kakao.talk",
-            "processId": 12736,
-            "exited": true
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.sec.android.app.launcher",
-            "processId": 1765,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 1963,
-            "exited": true
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 4047,
-            "exited": true
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 11290,
-            "exited": true
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 27492,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 13061,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 16398,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 1436,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 1421,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 1422,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 5843,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 8961,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 13821,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 15745,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 1432,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 9715,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 4350,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 1426,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 1425,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 1433,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 401,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 2767,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
             "processId": 4874,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "2173d2e0070d7ece",
             "name": "com.AIRY.AIRY101",
             "processId": 20173,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "2173d2e0070d7ece",
             "name": "com.AIRY.AIRY101",
             "processId": 410,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "2173d2e0070d7ece",
             "name": "com.AIRY.AIRY101",
             "processId": 13472,
+            "exited": true
+        },
+        {
+            "deviceId": "2173d2e0070d7ece",
+            "name": "com.AIRY.AIRY101",
+            "processId": 18801,
+            "exited": true
+        },
+        {
+            "deviceId": "2173d2e0070d7ece",
+            "name": "com.sec.android.app.launcher",
+            "processId": 1819,
+            "exited": false
+        },
+        {
+            "deviceId": "2173d2e0070d7ece",
+            "name": "com.AIRY.AIRY101",
+            "processId": 19357,
+            "exited": false
+        },
+        {
+            "deviceId": "2173d2e0070d7ece",
+            "name": "com.AIRY.AIRY101",
+            "processId": 21440,
+            "exited": false
+        },
+        {
+            "deviceId": "2173d2e0070d7ece",
+            "name": "com.AIRY.AIRY101",
+            "processId": 26273,
+            "exited": false
+        },
+        {
+            "deviceId": "2173d2e0070d7ece",
+            "name": "com.AIRY.AIRY101",
+            "processId": 3757,
+            "exited": false
+        },
+        {
+            "deviceId": "2173d2e0070d7ece",
+            "name": "com.AIRY.AIRY101",
+            "processId": 9246,
+            "exited": false
+        },
+        {
+            "deviceId": "2173d2e0070d7ece",
+            "name": "com.AIRY.AIRY101",
+            "processId": 7777,
+            "exited": false
+        },
+        {
+            "deviceId": "2173d2e0070d7ece",
+            "name": "com.AIRY.AIRY101",
+            "processId": 12652,
             "exited": false
         }
     ],

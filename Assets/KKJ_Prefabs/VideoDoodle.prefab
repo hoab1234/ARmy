@@ -287,6 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mesh: {fileID: 5168046906888525766}
+  isImageDoodle: 0
   textures: []
 --- !u!1 &2556274926883523205
 GameObject:
@@ -870,6 +871,7 @@ GameObject:
   - component: {fileID: 1343320437193961455}
   - component: {fileID: 249475986047913377}
   - component: {fileID: 3493687482809956022}
+  - component: {fileID: 7522110814678673134}
   m_Layer: 0
   m_Name: VideoDoodle
   m_TagString: DOODLE
@@ -1052,6 +1054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mesh: {fileID: 5168046906888525766}
+  isImageDoodle: 0
   textures:
   - {fileID: 2800000, guid: 16412b56d3e60654bba5b2cba12a7fd5, type: 3}
   - {fileID: 2800000, guid: 39214026c579c74468d97921f38b13c4, type: 3}
@@ -1059,3 +1062,15 @@ MonoBehaviour:
   - {fileID: 2800000, guid: d05827f607ed0d64ab244dda962f1fa5, type: 3}
   - {fileID: 2800000, guid: 495f81dde95bdc248ae353994c5ebb39, type: 3}
   - {fileID: 2800000, guid: b43b75729934f8f42bc45dfa50261844, type: 3}
+--- !u!114 &7522110814678673134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179741360277255177}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf5ba816ef6533943a5757d8af236ac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
