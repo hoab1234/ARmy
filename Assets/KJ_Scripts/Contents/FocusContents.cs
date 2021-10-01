@@ -11,7 +11,6 @@ public class FocusContents : MonoBehaviour
     {
         videoToggleBtn = GetComponent<VideoToogleBtn>();
         pos = Camera.main.transform.position + Camera.main.transform.forward * 3f;
-       
     }
 
     void Update()

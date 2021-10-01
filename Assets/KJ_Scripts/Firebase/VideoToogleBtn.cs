@@ -30,15 +30,12 @@ Pause
         vp = GetComponentInChildren<VideoPlayer>();
         vp.Pause();
         //vpState = State.None;
-        PlayBtn.SetActive(true);
-        PauseBtn.SetActive(false);
+        if (PlayBtn != null) PlayBtn.SetActive(true);
+        if (PauseBtn != null) PauseBtn.SetActive(false);
         //isFocus = false;
         //StartCoroutine("BtnToggle");
     }
-    void Update()
-    {
-       
-    }
+    
     public void SetState(bool state)
     {
         if (state)

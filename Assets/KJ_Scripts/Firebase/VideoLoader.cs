@@ -39,14 +39,10 @@ public class VideoLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isUseTrans = new bool[trans.Length];
-        for (int i = 0; i < isUseTrans.Length; i++)
-        {
-            isUseTrans[i] = false;
-        }
+       
 
         storage = FirebaseStorage.DefaultInstance;
-        
+
         //첫번째 스토리지
         storageReference = storage.GetReferenceFromUrl("gs://airy-907b8.appspot.com/");
 
@@ -74,7 +70,7 @@ public class VideoLoader : MonoBehaviour
     {
 
         // 새로운 doodle 참조
-       
+
         StorageReference sr = storageReference.Child("/VideoDoodle/newFile"
                + (doodleNum - 1).ToString() + ".mp4");
         // 새로운 doodle 참조
@@ -95,42 +91,43 @@ public class VideoLoader : MonoBehaviour
 
             if (!task.IsFaulted && !task.IsCanceled)
             {
-                StartCoroutine(LoadVideo(Convert.ToString(task.Result),VideoDoodleText)); //Fetch file from the link
+                StartCoroutine(LoadVideo(Convert.ToString(task.Result), VideoDoodleText)); //Fetch file from the link
             }
             else
             {
                 Debug.Log(task.Exception);
             }
         });
-        
+
     }
 
 
     public Transform[] trans;
-    bool[] isUseTrans;
     int index = 0;
     string videoDoodleText;
 
-    IEnumerator LoadVideo(string MediaUrl,string VideoDoodleTextDown)
+    IEnumerator LoadVideo(string MediaUrl, string VideoDoodleTextDown)
     {
         UnityWebRequest request = UnityWebRequest.Get(MediaUrl);
 
         yield return request.SendWebRequest(); //Wait for the request to complete
 
-       
+
         VideoPlayer vp;
         GameObject doodle = Instantiate(doodleFactory);
         vp = doodle.GetComponentInChildren<VideoPlayer>();
         vp.url = request.url;
 
-        if (isUseTrans[index] == false)
-        {
-            doodle.transform.position = trans[index].transform.position;
-            doodle.transform.parent = trans[index];
-            doodle.GetComponent<Doodle>().setParent(trans[index].gameObject);
-            isUseTrans[index] = true;
-            index++;
-        }
+        index = doodle.GetComponent<Doodle>().getPosIndex();
+
+        /* doodle.transform.position = trans[index].transform.position;
+         doodle.transform.parent = trans[index];
+         doodle.GetComponent<Doodle>().setParent(trans[index].gameObject);*/
+
+        doodle.transform.parent = trans[index];
+        doodle.transform.localPosition = Vector3.zero;
+        doodle.GetComponent<Doodle>().setDir();
+
 
         DebugUI.instance.UpdateDebugForVideo("load video execute");
 
@@ -141,7 +138,7 @@ public class VideoLoader : MonoBehaviour
 
 
     string videoDoodleTextDown;
-    
+
     public void DownLoadVideo(int VideoNum)
     {
         if (VideoNum < MaxVideoDoodle)
@@ -171,7 +168,7 @@ public class VideoLoader : MonoBehaviour
                 {
                     if (!task.IsFaulted && !task.IsCanceled)
                     {
-                        StartCoroutine(LoadVideo(Convert.ToString(task.Result),videoDoodleTextDown)); //Fetch file from the link
+                        StartCoroutine(LoadVideo(Convert.ToString(task.Result), videoDoodleTextDown)); //Fetch file from the link
                         DebugUI.instance.UpdateDebugForVideo("video DOWNLOAD -> load Call");
                     }
                     else

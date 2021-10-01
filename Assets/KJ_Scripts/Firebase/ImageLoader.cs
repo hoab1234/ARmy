@@ -8,6 +8,7 @@ using Firebase.Extensions;
 using Firebase.Storage;
 using System;
 using System.Threading.Tasks;
+using Random = UnityEngine.Random;
 
 
 // ar�̹��� �ν��ؼ� �� �����
@@ -16,7 +17,7 @@ using System.Threading.Tasks;
 public class ImageLoader : MonoBehaviour
 {
     public static ImageLoader instance;
-    public int MaxImgaeDoodle = 50;
+    public int MaxImgaeDoodle = 30;
    
     public void Awake()
     {
@@ -39,11 +40,7 @@ public class ImageLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isUseTrans = new bool[trans.Length];
-        for(int i = 0; i < isUseTrans.Length; i++)
-        {
-            isUseTrans[i] = false;
-        }
+       
         storage = FirebaseStorage.DefaultInstance;
 
 
@@ -92,33 +89,48 @@ public class ImageLoader : MonoBehaviour
           });
     }
     public Transform[] trans;
-    bool[] isUseTrans;
+    
     int index=0;
+
+
+   
+
     IEnumerator LoadImage(string MediaUrl,string ImageDoodleText)
     {
+
+        
         UnityWebRequest request = UnityWebRequestTexture.GetTexture(MediaUrl); //Create a request
         yield return request.SendWebRequest(); //Wait for the request to complete
+        //yield return new WaitUntil(() => request.isDone);
 
         texture = ((DownloadHandlerTexture)request.downloadHandler).texture;
         print("loadimage func start");
         GameObject doodle = Instantiate(doodleFactory);
         doodle.GetComponentInChildren<MeshRenderer>().material.mainTexture = texture;
-        if(isUseTrans[index] == false)
-        {
-            
-            doodle.transform.position = trans[index].transform.position;
-            doodle.transform.parent = trans[index];
-            doodle.GetComponent<Doodle>().setParent(trans[index].gameObject);
-            isUseTrans[index] = true;
-            index++;
-            
-          
-        }
-       
-        
+
+
         TextMesh imageText = doodle.GetComponentInChildren<TextMesh>();
         imageText.text = ImageDoodleText;
         DebugUI.instance.UpdateDebugForImg("loadimage execute");
+        
+        index = doodle.GetComponent<Doodle>().getPosIndex();
+       
+        
+        
+            print("Check1");
+            doodle.transform.parent = trans[index];
+            doodle.transform.localPosition = Vector3.zero;
+            doodle.GetComponent<Doodle>().setDir();
+           
+            //doodle.transform.parent = trans[index];
+            //doodle.transform.localRotation = trans[index].localRotation;
+            // doodle.GetComponent<Doodle>().setParent(trans[index].gameObject);
+           
+            
+
+       
+       
+        
     }
     string ImageDoodleTextDown;
     public void DownLoadImages(int imgNum)
@@ -155,7 +167,7 @@ public class ImageLoader : MonoBehaviour
                         
                         DebugUI.instance.UpdateDebugForImg(ImageDoodleText);
                         StartCoroutine(LoadImage(Convert.ToString(task.Result),ImageDoodleTextDown)); //Fetch file from the link
-                        DebugUI.instance.UpdateDebugForImg("downloadimage loadimage func call");
+                        //DebugUI.instance.UpdateDebugForImg("downloadimage loadimage func call");
                     }
                     else
                     {
