@@ -8063,5 +8063,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall1001Last
       objectReference: {fileID: 0}
+    - target: {fileID: 9158972189297890117, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
