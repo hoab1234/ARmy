@@ -14,7 +14,6 @@ public class DoodleTouchEvent : MonoBehaviour
     }
     private Touch touch;
     public float rayLength = 100;
-    public Transform pos;
     public bool isPlaying = false;
     bool alreadyFocus = false;
     GameObject doodle;
@@ -31,10 +30,7 @@ public class DoodleTouchEvent : MonoBehaviour
 
     Transform tempParentsT;
     GameObject tempParent;
-    IEnumerator CameraTrack() {
-        yield return new WaitForSeconds(.2f);
-        tempobj.transform.position = pos.transform.position;
-    }
+    
 
     void Update()
     {
