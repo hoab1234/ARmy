@@ -10,7 +10,8 @@ public class DebugUI : MonoBehaviour
     public Text Imagedebug;
     public Text VideoDebug;
     public Text GmDebug;
-    public Text posDebug;
+    public Text posDebug1;
+    public Text posDebug2;
     private void Awake()
     {
         if (instance == null)
@@ -19,12 +20,7 @@ public class DebugUI : MonoBehaviour
         }
     }
 
-    public void UpdateDebugForPos(string text)
-    {
-
-        posDebug.text = text;
-
-    }
+    
     // Start is called before the first frame update
 
     public void UpdateDebugForImg(string text)
@@ -40,6 +36,17 @@ public class DebugUI : MonoBehaviour
     public void UpdateDebugForGm(string text)
     {
         GmDebug.text = text;
+    }
+
+    public void LocalPosCheck(GameObject obj)
+    {
+        string text = "LocalPos = (" + obj.transform.localPosition.x + "," + obj.transform.localPosition.y + ", " + obj.transform.localPosition.z;
+        posDebug1.text = obj.name + "---" + text;
+    }
+    public void PosUpdate(GameObject obj)
+    {
+        string text = "WorldPos = (" + obj.transform.localPosition.x + "," + obj.transform.localPosition.y + ", " + obj.transform.localPosition.z;
+        posDebug2.text = obj.name + "---" + text;
     }
 
 }

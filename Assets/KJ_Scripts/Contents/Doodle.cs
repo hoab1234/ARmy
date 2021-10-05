@@ -9,44 +9,67 @@ public class Doodle : MonoBehaviour
     private MeshRenderer mesh;
     public bool isImageDoodle;
     public Texture[] textures;
-    public Dictionary<int, Texture> matDic =  new Dictionary<int, Texture>();
+    public Dictionary<int, Texture> matDic = new Dictionary<int, Texture>();
     //public Vector3 offset;
     // pos.position = Camera.main.transform.position + offset;
 
 
+    private bool isMoving;
 
     int maxNum;
 
     private void Awake()
     {
-        if(isImageDoodle)
+        if (isImageDoodle)
         {
             maxNum = ImageLoader.instance.MaxImgaeDoodle;
-            
+
         }
         else
         {
             maxNum = VideoLoader.instance.MaxVideoDoodle;
         }
 
-      
-
-        for (int i = 1; i < textures.Length+1; i++)
+        for (int i = 1; i < textures.Length + 1; i++)
         {
-            matDic.Add(i, textures[i-1]);
+            matDic.Add(i, textures[i - 1]);
         }
         //mesh = GetComponentInChildren<MeshRenderer>();
     }
     private void Start()
     {
+        isMoving = false;
         mesh.material.mainTexture = RandomDoodleMat();
+        StartCoroutine(ARDoodlePosReset());
+    }
+
+    IEnumerator ARDoodlePosReset()
+    {
+        while (true)
+        {
+            Vector3 temp;
+            yield return new WaitForSeconds(2f);
+            if (!isMoving)
+            {
+
+                temp = transform.position;
+                if (0.5f <= temp.x || temp.x <= -0.5f ||
+                    0.5f <= temp.y || temp.y <= -0.5f ||
+                    0.5f <= temp.z || temp.z <= -0.5f)
+                {
+                    transform.localPosition = Vector3.zero;
+                }
+
+
+            }
+        }
     }
     public Texture RandomDoodleMat()
     {
-        int randomInt =  Random.Range(1, textures.Length+1);
-        
+        int randomInt = Random.Range(1, textures.Length + 1);
+
         return matDic[randomInt];
-        
+
     }
     public GameObject getParent()
     {
@@ -59,6 +82,7 @@ public class Doodle : MonoBehaviour
     }
     public void GoBack()
     {
+        isMoving = true;
         transform.DOMove(parent.transform.position, 1f, false);
         StartCoroutine(PARENTBACK());
     }
@@ -67,10 +91,12 @@ public class Doodle : MonoBehaviour
         yield return new WaitForSeconds(1f);
         transform.parent = parent.transform;
         setDir();
+        isMoving = false;
     }
     public void GoToCamera()
     {
         Transform _pos = GameObject.Find("ContentsFocusPos").transform;
+        isMoving = true;
         transform.DOMove(_pos.position, 1f, false);
         transform.parent = _pos;
         StartCoroutine(PARENTISCAMERA());
@@ -84,12 +110,12 @@ public class Doodle : MonoBehaviour
     public void setDir()
     {
         bool tempDir = transform.parent.GetComponent<TransMove>().getDir();
-        if (tempDir) // ¿À¸¥ÂÊÀÎ°¡
+        if (tempDir) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î°ï¿½
         {
             print("tempDIR IS TRUE");
             transform.localRotation = Quaternion.Euler(0, 90, 0);
         }
-        else //¿ÞÂÊº®ÀÎ°¡
+        else //ï¿½ï¿½ï¿½Êºï¿½ï¿½Î°ï¿½
         {
             print("tempDIR IS FALSE");
             transform.localRotation = Quaternion.Euler(0, -90, 0);
@@ -123,7 +149,7 @@ public class Doodle : MonoBehaviour
     internal int getPosIndex()
     {
         index = getRandomNum();
-        return index; 
+        return index;
     }
 
     public void EnableToggleBillborad(bool tempbool)

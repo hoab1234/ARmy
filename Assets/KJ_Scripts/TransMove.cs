@@ -27,6 +27,19 @@ public class TransMove : MonoBehaviour
         {
             dir = -1;
         }
+        StartCoroutine(SetOriginPos());
+    }
+
+    IEnumerator SetOriginPos()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(1f);
+            if( transform.localPosition.x >= 2.2 || transform.localPosition.z != 0) 
+            {
+                transform.localPosition = new Vector3(2.2f, transform.localPosition.y, 0f);
+            }
+        }
     }
 
     // Update is called once per frame

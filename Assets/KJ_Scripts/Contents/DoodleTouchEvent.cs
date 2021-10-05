@@ -175,7 +175,7 @@ public class DoodleTouchEvent : MonoBehaviour
 #endif
     }
 
-    
+
 }
 
 
