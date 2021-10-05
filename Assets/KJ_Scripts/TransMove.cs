@@ -10,7 +10,8 @@ public class TransMove : MonoBehaviour
     int dir;
 
     public bool isRightdir = false;
-
+    public float localLeftXpos = 3f;
+    public float localRightXpos = 1.3f;
     public bool getDir()
     {
         return isRightdir;
@@ -35,9 +36,20 @@ public class TransMove : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(1f);
-            if( transform.localPosition.x >= 2.2 || transform.localPosition.z != 0) 
+            if(!isRightdir)
             {
-                transform.localPosition = new Vector3(2.2f, transform.localPosition.y, 0f);
+
+                if( transform.localPosition.x >= 2.2 || transform.localPosition.z != 0) 
+                {
+                    transform.localPosition = new Vector3(localLeftXpos, transform.localPosition.y, 0f);
+                }
+            }
+            else if(isRightdir)
+            {
+                if (transform.localPosition.x >= 2.2 || transform.localPosition.z != 0)
+                {
+                    transform.localPosition = new Vector3(localRightXpos, transform.localPosition.y, 0f);
+                }
             }
         }
     }
