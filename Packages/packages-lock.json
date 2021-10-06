@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.google.ar.core.arfoundation.extensions": {
-      "version": "file:C:/Users/Meidici-Omen-27/Downloads/arcore-unity-extensions-1.26.0/arcore-unity-extensions-1.26.0",
+      "version": "file:C:/Users/medici/Downloads/arcore-unity-extension-1.26.0/package",
       "depth": 0,
       "source": "local",
       "dependencies": {

@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.google.ar.core.arfoundation.extensions": "file:C:/Users/Meidici-Omen-27/Downloads/arcore-unity-extensions-1.26.0/arcore-unity-extensions-1.26.0",
+    "com.google.ar.core.arfoundation.extensions": "file:C:/Users/medici/Downloads/arcore-unity-extension-1.26.0/package",
     "com.unity.collab-proxy": "1.5.7",
     "com.unity.ide.rider": "3.0.6",
     "com.unity.ide.visualstudio": "2.0.8",
