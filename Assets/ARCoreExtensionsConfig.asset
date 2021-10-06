@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf3e6e6afcaa124983563da26fb966a, type: 3}
   m_Name: ARCoreExtensionsConfig
   m_EditorClassIdentifier: 
-  CloudAnchorMode: 1
+  CloudAnchorMode: 0
