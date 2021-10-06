@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PosCheck : MonoBehaviour
 {
+    public GameObject guideLine;
+
     // Start is called before the first frame update
     void Start()
     {
+        guideLine.SetActive(false);
+
         StartCoroutine(ARPOSCHECK());    
     }
 
