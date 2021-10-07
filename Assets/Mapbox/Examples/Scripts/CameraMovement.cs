@@ -76,12 +76,12 @@ namespace Mapbox.Examples
 
                             if (angle <= -50 && angle >= -110 && swipeDistanceX > SWIPE_DISTANCE_X_CONST)
                             {
-                                transform.RotateAround(player.transform.position, player.transform.up, -10);
+                                transform.RotateAround(player.transform.position, player.transform.up, -5);
                                 //Debug.Log("left swipe...");
                             }
                             else if (angle >= 50 && angle <= 110 && swipeDistanceX > SWIPE_DISTANCE_X_CONST)
                             {
-                                transform.RotateAround(player.transform.position, player.transform.up, 10);
+                                transform.RotateAround(player.transform.position, player.transform.up, 5);
                                 //Debug.Log("right swipe...");
                             }
                         }
