@@ -102,6 +102,7 @@ public class BtnEvent : MonoBehaviour
         {
             if (Camera.main.transform.localPosition.z < 3200)
             {
+                PlayerRigPos.instance.isChangeScale = true;
                 Camera.main.transform.localPosition = new Vector3(0, 0, Mathf.Lerp(Camera.main.transform.localPosition.z, 3200, 10 * Time.deltaTime));
             }
             else
