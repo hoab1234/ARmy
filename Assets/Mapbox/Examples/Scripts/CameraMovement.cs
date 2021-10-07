@@ -28,6 +28,9 @@ namespace Mapbox.Examples
         [SerializeField]
         GameObject CameraPositionOrigin;
 
+        [SerializeField]
+        Text zoomLevelCheck;
+
         Vector2 firstFingerPosition;
         Vector2 lastFingerPosition;
         float angle;
@@ -71,14 +74,6 @@ namespace Mapbox.Examples
 
                             angle = Mathf.Atan2((lastFingerPosition.x - firstFingerPosition.x), (lastFingerPosition.y - firstFingerPosition.y)) * 57.2957795f;
 
-                            // if (angle > -30 && angle < 30 && swipeDistanceY > SWIPE_DISTANCE_Y_CONST)
-                            // {
-                            //     Debug.Log("up  swipe...");
-                            // }
-                            // else if (angle > 150 || angle < -150 && swipeDistanceY > SWIPE_DISTANCE_Y_CONST)
-                            // {
-                            //     Debug.Log("down  swipe...");
-                            // }
                             if (angle <= -50 && angle >= -110 && swipeDistanceX > SWIPE_DISTANCE_X_CONST)
                             {
                                 transform.RotateAround(player.transform.position, player.transform.up, -10);
@@ -104,12 +99,6 @@ namespace Mapbox.Examples
 
                 case 2:
                     {
-                        // if (transform.position.x != CameraPositionOrigin.transform.position.x && transform.position.y != CameraPositionOrigin.transform.position.y)
-                        // {
-                        //     transform.position = new Vector3(CameraPositionOrigin.transform.position.x, CameraPositionOrigin.transform.position.y, transform.position.z);
-                        //     transform.LookAt(player.transform);
-                        // }
-
                         // Store both touches.
                         Touch touchZero = Input.GetTouch(0);
                         Touch touchOne = Input.GetTouch(1);
@@ -135,6 +124,7 @@ namespace Mapbox.Examples
 
         void ZoomMapUsingTouchOrMouse(float zoomFactor)
         {
+            PlayerRigPos.instance.isChangeScale = true;
             BtnEvent.instance.isFocusing = false;
             var y = zoomFactor * _zoomSpeed;
             transform.localPosition += (Vector3.forward * y);
@@ -170,6 +160,7 @@ namespace Mapbox.Examples
             {
                 HandleTouch();
             }
+            zoomLevelCheck.text = transform.localPosition.z.ToString();
         }
     }
 }
