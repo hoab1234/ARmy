@@ -123,9 +123,7 @@ public class ImageLoader : MonoBehaviour
             doodle.GetComponent<Doodle>().setParent(trans[index].gameObject);
             doodle.GetComponent<Doodle>().setDir();
            
-            //doodle.transform.parent = trans[index];
-            //doodle.transform.localRotation = trans[index].localRotation;
-            // doodle.GetComponent<Doodle>().setParent(trans[index].gameObject);
+           
            
             
 

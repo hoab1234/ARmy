@@ -22,5 +22,4 @@ public class KKJ_SceneManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-
 }
