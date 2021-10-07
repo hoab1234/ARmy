@@ -77,12 +77,12 @@ namespace Mapbox.Examples
                             if (angle <= -50 && angle >= -110 && swipeDistanceX > SWIPE_DISTANCE_X_CONST)
                             {
                                 transform.RotateAround(player.transform.position, player.transform.up, -10);
-                                Debug.Log("left swipe...");
+                                //Debug.Log("left swipe...");
                             }
                             else if (angle >= 50 && angle <= 110 && swipeDistanceX > SWIPE_DISTANCE_X_CONST)
                             {
                                 transform.RotateAround(player.transform.position, player.transform.up, 10);
-                                Debug.Log("right swipe...");
+                                //Debug.Log("right swipe...");
                             }
                         }
 
@@ -160,7 +160,7 @@ namespace Mapbox.Examples
             {
                 HandleTouch();
             }
-            zoomLevelCheck.text = transform.localPosition.z.ToString();
+            //zoomLevelCheck.text = transform.localPosition.z.ToString();
         }
     }
 }
