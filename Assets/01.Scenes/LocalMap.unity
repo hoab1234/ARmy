@@ -757,6 +757,7 @@ MonoBehaviour:
   quitMenuPanel: {fileID: 1049217604}
   player: {fileID: 1341642560143511974}
   CameraPositionOrigin: {fileID: 1616166674}
+  zoomLevelCheck: {fileID: 1569557360}
 --- !u!1 &242832404
 GameObject:
   m_ObjectHideFlags: 0
@@ -2781,7 +2782,7 @@ GameObject:
   - component: {fileID: 1569557361}
   - component: {fileID: 1569557360}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: TextZoomLevelCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
