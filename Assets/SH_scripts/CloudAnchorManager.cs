@@ -78,6 +78,14 @@ public class CloudAnchorManager : MonoBehaviour
         hostButton.onClick.AddListener(() => OnHostClick());
         resolveButton.onClick.AddListener(() => OnResolveClick());
         resetButton.onClick.AddListener(() => OnResetClick());
+
+        StartCoroutine("AutoResolve");
+    }
+
+    IEnumerator AutoResolve()
+    {
+        yield return new WaitForSeconds(2);
+        Resolving();
     }
 
     void Update()
