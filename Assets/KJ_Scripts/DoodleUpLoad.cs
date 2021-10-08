@@ -86,8 +86,8 @@ public class DoodleUpLoad : MonoBehaviour
         Doodle.transform.parent = ImageLoader.instance.trans[index];
         Doodle.GetComponent<Doodle>().setParent(ImageLoader.instance.trans[index].gameObject);
         Doodle.GetComponent<Doodle>().GoBack();
-        
-        
+
+        UIManager.instance.UICameraIconOn();
         //Doodle.GetComponent<Doodle>().setDir();
     } 
    
