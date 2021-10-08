@@ -24,7 +24,7 @@ public class GuildUIBlink : MonoBehaviour
         {
             if(fadeIn)
             {
-                canvasGroup01.DOFade( 0.5f, 1f);
+                canvasGroup01.DOFade( 0.3f, 1f);
                 fadeIn = false;
             }
             else

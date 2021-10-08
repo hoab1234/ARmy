@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using Firebase.Storage;
 using System.Threading.Tasks;
-
+using DG.Tweening;
 public class DoodleUpLoad : MonoBehaviour
 {
 
     public GameObject TempDoodleImg;
-
+    public GameObject imageDoodle;
 
     FirebaseStorage storage;
     StorageReference storageReference;
@@ -62,12 +62,33 @@ public class DoodleUpLoad : MonoBehaviour
                   }
               });
         StartCoroutine(TempUIoff());
+        Texture texture = TempDoodleImg.GetComponent<TemporaryDoodle>().texture;
+        SetPosUpLoadDoodle(texture, inputText);
     }
 
     IEnumerator TempUIoff()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.01f);
         TempDoodleImg.SetActive(false);
+        UIManager.instance.UiUpLoadOff();
     }
+
+    public void SetPosUpLoadDoodle(Texture texture , string str)
+    {
+        GameObject Doodle = Instantiate(imageDoodle);
+        Doodle.GetComponentInChildren<MeshRenderer>().material.mainTexture = texture;
+        TextMesh imageText = Doodle.GetComponentInChildren<TextMesh>();
+        imageText.text = str;
+        Doodle.transform.position = TempDoodleImg.transform.position;
+        Doodle.transform.rotation = TempDoodleImg.transform.rotation;
+
+        int index = Doodle.GetComponent<Doodle>().getPosIndex();
+        Doodle.transform.parent = ImageLoader.instance.trans[index];
+        Doodle.GetComponent<Doodle>().setParent(ImageLoader.instance.trans[index].gameObject);
+        Doodle.GetComponent<Doodle>().GoBack();
+        
+        
+        //Doodle.GetComponent<Doodle>().setDir();
+    } 
    
 }

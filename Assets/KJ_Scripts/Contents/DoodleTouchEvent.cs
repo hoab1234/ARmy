@@ -160,10 +160,10 @@ public class DoodleTouchEvent : MonoBehaviour
             videotoogleBtn.GetComponent<VideoPlayer>().Stop();
             videotoogleBtn.xIconClicked = true;
         }
-/*#if UNITY_EDITOR
+
         tempobj.GetComponent<Doodle>().GoBack();
         tempobj.GetComponent<Doodle>().EnableToggleBillborad(false);
-#endif*/
+
 #if UNITY_ANDROID
         doodle.GetComponent<Doodle>().GoBack();
         doodle.GetComponent<Doodle>().EnableToggleBillborad(false);

@@ -31,7 +31,7 @@ public class CloudAnchorManager : MonoBehaviour
     public Text messageText;
 
     // 상태 변수
-    public Mode mode = Mode.READY;
+    public Mode mode = Mode.RESOLVE;
     // AnchorManager //로컬 앵커를 생성하기 위한 클래스
     public ARAnchorManager anchorManager;
     // ArRaycastManager

@@ -124,13 +124,9 @@ public class ImageLoader : MonoBehaviour
             doodle.GetComponent<Doodle>().setDir();
            
            
-           
-            
-
-       
-       
         
     }
+
     string ImageDoodleTextDown;
     public void DownLoadImages(int imgNum)
     {
