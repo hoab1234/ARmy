@@ -6,7 +6,7 @@ public class PlayerRigPos : MonoBehaviour
 {
     public static PlayerRigPos instance;
 
-    public float rigY = 1.4f;
+    public float rigPosY = 1.6f;
     public Transform zoomCamera;
     public bool isChangeScale;
 
@@ -39,8 +39,8 @@ public class PlayerRigPos : MonoBehaviour
 
     private void ChangePlayerScaleAndY()
     {
-        rigY = 1.4f * (11 - GetNewRangeValue(-180, 3200, zoomCamera.transform.localPosition.z, 1, 10));
-        transform.position = new Vector3(transform.position.x, rigY, transform.position.z);
+        rigPosY = 2 * (11 - GetNewRangeValue(-180, 3200, zoomCamera.transform.localPosition.z, 1, 10));
+        transform.position = new Vector3(transform.position.x, rigPosY, transform.position.z);
         transform.localScale = Vector3.one * 100 * (11 - GetNewRangeValue(-180, 3200, zoomCamera.transform.localPosition.z, 1, 10));
     }
 }
