@@ -99,6 +99,11 @@ namespace Mapbox.Examples
 
                 case 2:
                     {
+                        if (transform.localPosition.x != CameraPositionOrigin.transform.localPosition.x && transform.localPosition.y != CameraPositionOrigin.transform.localPosition.y)
+                        {
+                            transform.position = CameraPositionOrigin.transform.position;
+                            transform.LookAt(player.transform);
+                        }
                         // Store both touches.
                         Touch touchZero = Input.GetTouch(0);
                         Touch touchOne = Input.GetTouch(1);
@@ -125,6 +130,7 @@ namespace Mapbox.Examples
         void ZoomMapUsingTouchOrMouse(float zoomFactor)
         {
             PlayerRigPos.instance.isChangeScale = true;
+            SpawnOnMap.instance.isChangeScale = true;
             BtnEvent.instance.isFocusing = false;
             var y = zoomFactor * _zoomSpeed;
             transform.localPosition += (Vector3.forward * y);
@@ -151,6 +157,8 @@ namespace Mapbox.Examples
                     throw new System.Exception("You must have a reference map assigned!");
                 }
             }
+
+            transform.localPosition = new Vector3(0, 0, 3200);
         }
 
         void LateUpdate()

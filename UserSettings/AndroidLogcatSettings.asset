@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R39M204E7GH",
         "name": "com.AIRY.AIRY101",
-        "processId": 13230,
+        "processId": 7236,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -288,6 +288,24 @@
             "deviceId": "R39M204E7GH",
             "name": "com.AIRY.AIRY101",
             "processId": 31929,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M204E7GH",
+            "name": "com.AIRY.AIRY101",
+            "processId": 2680,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M204E7GH",
+            "name": "com.AIRY.AIRY101",
+            "processId": 1315,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M204E7GH",
+            "name": "com.AIRY.AIRY101",
+            "processId": 7236,
             "exited": false
         },
         {
