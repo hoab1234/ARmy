@@ -92,6 +92,8 @@ namespace Mapbox.Examples
                             {
                                 transform.position = CameraPositionOrigin.transform.position;
                                 transform.LookAt(player.transform);
+                                PlayerRigPos.instance.isChangeScale = true;
+                                SpawnOnMap.instance.isChangeScale = true;
                             }
                         }
                     }

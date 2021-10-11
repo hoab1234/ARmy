@@ -50,7 +50,6 @@
                 instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                 _spawnedObjects.Add(instance);
             }
-			ChangeSpawnedObjectScaleAndY();
         }
 
         private void Update()

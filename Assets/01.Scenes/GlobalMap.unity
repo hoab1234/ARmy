@@ -659,7 +659,7 @@ MonoBehaviour:
         isActive: 1
         layerSource:
           Name: Streets
-          Id: mapbox://styles/1k3h/ckuhluockeezq19qj6zdqi6sm
+          Id: mapbox://styles/1k3h/ckul36dv4hsqn19qjuwnoj2bb
           Modified: 
           UserName: 
       rasterOptions:
@@ -789,6 +789,8 @@ MonoBehaviour:
   _locationStrings: []
   _spawnScale: 10
   _markerPrefab: {fileID: 1839187062704024, guid: 9b5b1b761a8994c07affd0a05396633b, type: 3}
+  zoomCamera: {fileID: 0}
+  isChangeScale: 0
 --- !u!1 &656440108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,6 +1096,7 @@ MonoBehaviour:
   changeToGlobalBtn: {fileID: 0}
   changeToLocalBtn: {fileID: 656440110}
   focusBtn: {fileID: 0}
+  cameraPositionOrigin: {fileID: 0}
   isFocusing: 0
 --- !u!4 &1011567030
 Transform:
