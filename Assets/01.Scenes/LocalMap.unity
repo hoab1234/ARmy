@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 159634025}
   - component: {fileID: 159634026}
   - component: {fileID: 159634028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ MonoBehaviour:
         isActive: 1
         layerSource:
           Name: Dark
-          Id: mapbox://styles/1k3h/ckuhluockeezq19qj6zdqi6sm
+          Id: mapbox://styles/1k3h/ckul36dv4hsqn19qjuwnoj2bb
           Modified: 
           UserName: 
       rasterOptions:
@@ -1490,7 +1490,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -2935,18 +2935,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7484896782741046100, guid: 9ba41119f1fa7a240bed633f110a2e7f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 7484896782741046100, guid: 9ba41119f1fa7a240bed633f110a2e7f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.009999997
-      objectReference: {fileID: 0}
-    - target: {fileID: 7484896782741046100, guid: 9ba41119f1fa7a240bed633f110a2e7f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.009999997
-      objectReference: {fileID: 0}
-    - target: {fileID: 7484896782741046100, guid: 9ba41119f1fa7a240bed633f110a2e7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2956,7 +2944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7484896782741046100, guid: 9ba41119f1fa7a240bed633f110a2e7f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.035000004
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 7484896782741046100, guid: 9ba41119f1fa7a240bed633f110a2e7f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3290,6 +3278,7 @@ MonoBehaviour:
   changeToGlobalBtn: {fileID: 901043649}
   changeToLocalBtn: {fileID: 0}
   focusBtn: {fileID: 573506531}
+  cameraPositionOrigin: {fileID: 0}
   isFocusing: 0
 --- !u!1 &13467591788906284
 GameObject:

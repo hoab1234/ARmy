@@ -18,6 +18,8 @@ public class BtnEvent : MonoBehaviour
     public Button changeToLocalBtn;
     public Button focusBtn;
 
+    public Transform cameraPositionOrigin;
+
     public bool isFocusing = false;
 
     void Awake()
@@ -101,11 +103,12 @@ public class BtnEvent : MonoBehaviour
 
         if (isFocusing)
         {
-            if (Camera.main.transform.localPosition.z < 3200)
+            if (Camera.main.transform.localPosition.z < 3200 || cameraPositionOrigin.localPosition.z < 3200)
             {
                 PlayerRigPos.instance.isChangeScale = true;
                 SpawnOnMap.instance.isChangeScale = true;
                 Camera.main.transform.localPosition = new Vector3(0, 0, Mathf.Lerp(Camera.main.transform.localPosition.z, 3200, 10 * Time.deltaTime));
+                cameraPositionOrigin.localPosition = new Vector3(0, 0, Mathf.Lerp(cameraPositionOrigin.localPosition.z, 3200, 10 * Time.deltaTime));
             }
             else
             {
