@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "R39M204E7GH",
+    "m_SelectedDeviceId": "2173d2e0070d7ece",
     "m_SelectedPackage": {
-        "deviceId": "R39M204E7GH",
+        "deviceId": "2173d2e0070d7ece",
         "name": "com.AIRY.AIRY101",
-        "processId": 13230,
+        "processId": 32617,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -273,24 +273,6 @@
             "exited": false
         },
         {
-            "deviceId": "R39M204E7GH",
-            "name": "com.sec.android.app.launcher",
-            "processId": 1914,
-            "exited": false
-        },
-        {
-            "deviceId": "R39M204E7GH",
-            "name": "com.AIRY.AIRY101",
-            "processId": 16945,
-            "exited": true
-        },
-        {
-            "deviceId": "R39M204E7GH",
-            "name": "com.AIRY.AIRY101",
-            "processId": 31929,
-            "exited": false
-        },
-        {
             "deviceId": "2173d2e0070d7ece",
             "name": "com.AIRY.AIRY101",
             "processId": 14748,
@@ -312,6 +294,36 @@
             "deviceId": "2173d2e0070d7ece",
             "name": "com.AIRY.AIRY101",
             "processId": 24931,
+            "exited": false
+        },
+        {
+            "deviceId": "2173d2e0070d7ece",
+            "name": "com.AIRY.AIRY101",
+            "processId": 26191,
+            "exited": false
+        },
+        {
+            "deviceId": "2173d2e0070d7ece",
+            "name": "com.AIRY.AIRY101",
+            "processId": 32617,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M204E7GH",
+            "name": "com.sec.android.app.launcher",
+            "processId": 1914,
+            "exited": false
+        },
+        {
+            "deviceId": "R39M204E7GH",
+            "name": "com.AIRY.AIRY101",
+            "processId": 16945,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M204E7GH",
+            "name": "com.AIRY.AIRY101",
+            "processId": 31929,
             "exited": false
         }
     ],
