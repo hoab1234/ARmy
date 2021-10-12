@@ -76,6 +76,7 @@ Pause
     {
         
             vp.Play();
+        print("video play");
            // vpState = State.Play;
             PlayBtn.SetActive(false);
             PauseBtn.SetActive(false);
@@ -87,8 +88,9 @@ Pause
     {
             playAfterOver = false;
             vp.Pause();
-            //vpState = State.Pause;
-            PlayBtn.SetActive(false);
+        print("video pause");
+        //vpState = State.Pause;
+        PlayBtn.SetActive(false);
         if (! playAfterOver)
         {
             PauseBtn.SetActive(true);

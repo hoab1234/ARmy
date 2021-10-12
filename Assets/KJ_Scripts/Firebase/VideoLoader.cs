@@ -118,23 +118,23 @@ public class VideoLoader : MonoBehaviour
         vp = doodle.GetComponentInChildren<VideoPlayer>();
         vp.url = request.url;
 
-        index = doodle.GetComponent<Doodle>().getPosIndex();
-
-        /* doodle.transform.position = trans[index].transform.position;
-         doodle.transform.parent = trans[index];
-         doodle.GetComponent<Doodle>().setParent(trans[index].gameObject);*/
-
-        doodle.transform.parent = trans[index];
-        doodle.transform.localPosition = Vector3.zero;
-        doodle.GetComponent<Doodle>().setDir();
-        doodle.GetComponent<Doodle>().setParent(trans[index].gameObject);
-
-
         DebugUI.instance.UpdateDebugForVideo("load video execute");
 
         TextMesh VideoText = doodle.GetComponentInChildren<TextMesh>();
         VideoText.text = VideoDoodleTextDown;
         DebugUI.instance.UpdateDebugForImg("Videoimage execute");
+        
+        
+        index = doodle.GetComponent<Doodle>().getPosIndex();
+
+        
+
+        doodle.transform.parent = trans[index];
+        doodle.transform.localPosition = Vector3.zero;
+        doodle.GetComponent<Doodle>().setParent(trans[index].gameObject);
+        doodle.GetComponent<Doodle>().setDir();
+
+
     }
 
 
