@@ -42,13 +42,13 @@ public class BtnEvent : MonoBehaviour
     public void OpenMarkerInfoPanel()
     {
         rt.DOAnchorPos(Vector2.zero, 0.5f);
-        image.DOFade(1, 0.5f);
+        //image.DOFade(1, 0.5f);
     }
 
     public void CloseMarkerInfoPanel()
     {
         rt.DOAnchorPos(new Vector2(0, -1600), 0.5f);
-        image.DOFade(0, 0.5f);
+        //image.DOFade(0, 0.5f);
     }
 
     public void ChangeToGlobal()
@@ -107,8 +107,9 @@ public class BtnEvent : MonoBehaviour
             {
                 PlayerRigPos.instance.isChangeScale = true;
                 SpawnOnMap.instance.isChangeScale = true;
-                Camera.main.transform.localPosition = new Vector3(0, 0, Mathf.Lerp(Camera.main.transform.localPosition.z, 3200, 10 * Time.deltaTime));
-                cameraPositionOrigin.localPosition = new Vector3(0, 0, Mathf.Lerp(cameraPositionOrigin.localPosition.z, 3200, 10 * Time.deltaTime));
+                Camera.main.transform.localPosition = new Vector3(Camera.main.transform.localPosition.x, Camera.main.transform.localPosition.y, Mathf.Lerp(Camera.main.transform.localPosition.z, 3200, 10 * Time.deltaTime));
+                cameraPositionOrigin.localPosition = Camera.main.transform.localPosition;
+                // cameraPositionOrigin.localPosition = new Vector3(cameraPositionOrigin.localPosition.x, cameraPositionOrigin.localPosition.y, Mathf.Lerp(cameraPositionOrigin.localPosition.z, 3200, 10 * Time.deltaTime));
             }
             else
             {
