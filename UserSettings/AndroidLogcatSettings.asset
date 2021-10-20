@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "2173d2e0070d7ece",
+    "m_SelectedDeviceId": "R39M204E7GH",
     "m_SelectedPackage": {
-        "deviceId": "2173d2e0070d7ece",
+        "deviceId": "R39M204E7GH",
         "name": "com.AIRY.AIRY101",
-        "processId": 12302,
+        "processId": 22705,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -328,14 +328,38 @@
         },
         {
             "deviceId": "R39M204E7GH",
-            "name": "com.AIRY.AIRY101",
-            "processId": 14748,
-            "exited": false
+            "name": "com.sec.android.app.launcher",
+            "processId": 1727,
+            "exited": true
         },
         {
             "deviceId": "R39M204E7GH",
             "name": "com.AIRY.AIRY101",
-            "processId": 8944,
+            "processId": 30698,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M204E7GH",
+            "name": "com.AIRY.AIRY101",
+            "processId": 26204,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M204E7GH",
+            "name": "com.AIRY.AIRY101",
+            "processId": 27787,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M204E7GH",
+            "name": "com.AIRY.AIRY101",
+            "processId": 19195,
+            "exited": true
+        },
+        {
+            "deviceId": "R39M204E7GH",
+            "name": "com.AIRY.AIRY101",
+            "processId": 22705,
             "exited": false
         }
     ],
