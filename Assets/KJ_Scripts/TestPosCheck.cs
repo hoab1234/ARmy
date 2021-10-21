@@ -15,5 +15,6 @@ public class TestPosCheck : MonoBehaviour
     void Update()
     {
         DebugUI.instance.PosUpdate(this.gameObject);
+        UIManager.instance.UICameraIconOn();
     }
 }

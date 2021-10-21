@@ -37,21 +37,17 @@ public class DoodleUpLoad : MonoBehaviour
         local_file = TempDoodleImg.GetComponent<TemporaryDoodle>().path;
         if(local_file == null)
         {
-            DebugUI.instance.UpdateDebugForGm("PATH IS NULL");
         }
         else
         {
-            DebugUI.instance.UpdateDebugForGm("path =" + local_file);
         }
         StorageReference uploadRef = storageReference.Child("ImageDoodle/newFile" + (RealTimeDataBase.instance.ImgNum).ToString() + ".jpg");
 
         uploadRef.PutFileAsync("file://" + local_file, new_meatadata) 
               .ContinueWith((Task<StorageMetadata> task) =>
               {
-                  DebugUI.instance.UpdateDebugForGm("putfileAsync");
                   if (task.IsFaulted || task.IsCanceled)
                   {
-                      DebugUI.instance.UpdateDebugForGm((local_file).ToString());
                   }
                   else
                   {

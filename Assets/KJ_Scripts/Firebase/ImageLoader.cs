@@ -104,7 +104,6 @@ public class ImageLoader : MonoBehaviour
         //yield return new WaitUntil(() => request.isDone);
 
         texture = ((DownloadHandlerTexture)request.downloadHandler).texture;
-        print("loadimage func start");
         GameObject doodle = Instantiate(doodleFactory);
         doodle.GetComponentInChildren<MeshRenderer>().material.mainTexture = texture;
 
@@ -117,7 +116,6 @@ public class ImageLoader : MonoBehaviour
        
         
         
-            print("Check1");
             doodle.transform.parent = trans[index];
             doodle.transform.localPosition = Vector3.zero;
             doodle.GetComponent<Doodle>().setParent(trans[index].gameObject);
