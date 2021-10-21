@@ -30,9 +30,9 @@ public class Doodle : MonoBehaviour
             maxNum = VideoLoader.instance.MaxVideoDoodle;
         }
 
-        for (int i = 1; i < textures.Length + 1; i++)
+        for (int i = 0; i < textures.Length; i++)
         {
-            matDic.Add(i, textures[i - 1]);
+            matDic.Add(i, textures[i]);
         }
         //mesh = GetComponentInChildren<MeshRenderer>();
     }
@@ -66,7 +66,8 @@ public class Doodle : MonoBehaviour
     }
     public Texture RandomDoodleMat()
     {
-        int randomInt = Random.Range(1, textures.Length + 1);
+        int randomInt = Random.Range(0, textures.Length);
+        print(randomInt);
 
         return matDic[randomInt];
 
@@ -112,12 +113,10 @@ public class Doodle : MonoBehaviour
         bool tempDir = transform.parent.GetComponent<TransMove>().getDir();
         if (tempDir) // �������ΰ�
         {
-            print("tempDIR IS TRUE");
             transform.localRotation = Quaternion.Euler(0, 90, 0);
         }
         else //���ʺ��ΰ�
         {
-            print("tempDIR IS FALSE");
             transform.localRotation = Quaternion.Euler(0, -90, 0);
         }
     }
@@ -125,8 +124,6 @@ public class Doodle : MonoBehaviour
     {
         int _index;
         _index = Random.Range(0, maxNum);
-        print("maxnum =======" + maxNum);
-        print("_index =========" + _index);
         if (isImageDoodle)
         {
             if (TransSetManager.inst.ImgtransCheck[_index] == true)

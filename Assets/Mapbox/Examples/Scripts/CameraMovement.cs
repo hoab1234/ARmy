@@ -160,8 +160,7 @@ namespace Mapbox.Examples
                 }
             }
 
-            transform.localPosition = new Vector3(0, 0, 2800);
-            CameraPositionOrigin.transform.localPosition = new Vector3(0, 0, 2800);
+            transform.localPosition = new Vector3(0, 0, 3200);
         }
 
         void LateUpdate()
