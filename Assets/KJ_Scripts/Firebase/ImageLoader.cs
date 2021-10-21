@@ -9,7 +9,7 @@ using Firebase.Storage;
 using System;
 using System.Threading.Tasks;
 using Random = UnityEngine.Random;
-
+using System.Threading;
 
 // ar�̹��� �ν��ؼ� �� �����
 //���̾�̽����� �̹��� �����ͼ�
@@ -35,7 +35,7 @@ public class ImageLoader : MonoBehaviour
     public GameObject doodleFactory;
 
 
-    List<string> ImageDoodleTextList;
+    
     List<StorageReference> doodleImgs;
     // Start is called before the first frame update
     void Start()
@@ -52,10 +52,12 @@ public class ImageLoader : MonoBehaviour
         //storageReference = storage.GetReferenceFromUrl("gs://army2-84bb3.appspot.com");
 
         doodleImgs = new List<StorageReference>();
+        ImageDoodleTextDown = new string[MaxImgaeDoodle];
+        ImageDoodleTextDown.Initialize();
 
     }
 
-    string ImageDoodleText; //��Ÿ������ ���� ����Ʈ
+    //string ImageDoodleText; //��Ÿ������ ���� ����Ʈ
     public void AddNewDoodle(int doodleNum)
     {
         print("doodlenum===" + doodleNum);
@@ -71,7 +73,7 @@ public class ImageLoader : MonoBehaviour
             if (!task.IsFaulted && !task.IsCanceled)
             {
                 StorageMetadata meta = task.Result;
-                ImageDoodleText=meta.GetCustomMetadata("ImageDoodleText");
+                //ImageDoodleText=meta.GetCustomMetadata("ImageDoodleText");
                 // do stuff with meta
             }//�̰� ������ �Ʒ��Լ� �����ϰ� �ؾ� �ɰŰ�����. �ڷ�ƾ?
         });
@@ -80,7 +82,7 @@ public class ImageLoader : MonoBehaviour
           {
               if (!task.IsFaulted && !task.IsCanceled)
               {
-                  StartCoroutine(LoadImage(Convert.ToString(task.Result),ImageDoodleText)); //Fetch file from the link
+                  //StartCoroutine(LoadImage(Convert.ToString(task.Result),ImageDoodleText)); //Fetch file from the link
               }
               else
               {
@@ -95,7 +97,7 @@ public class ImageLoader : MonoBehaviour
 
    
 
-    IEnumerator LoadImage(string MediaUrl,string ImageDoodleText)
+    IEnumerator LoadImage(string MediaUrl,string ImageDoodleTextDown)
     {
 
         
@@ -104,20 +106,18 @@ public class ImageLoader : MonoBehaviour
         //yield return new WaitUntil(() => request.isDone);
 
         texture = ((DownloadHandlerTexture)request.downloadHandler).texture;
-        print("loadimage func start");
         GameObject doodle = Instantiate(doodleFactory);
         doodle.GetComponentInChildren<MeshRenderer>().material.mainTexture = texture;
 
 
         TextMesh imageText = doodle.GetComponentInChildren<TextMesh>();
-        imageText.text = ImageDoodleText;
+        imageText.text = ImageDoodleTextDown;
         DebugUI.instance.UpdateDebugForImg("loadimage execute");
         
         index = doodle.GetComponent<Doodle>().getPosIndex();
        
         
         
-            print("Check1");
             doodle.transform.parent = trans[index];
             doodle.transform.localPosition = Vector3.zero;
             doodle.GetComponent<Doodle>().setParent(trans[index].gameObject);
@@ -127,7 +127,7 @@ public class ImageLoader : MonoBehaviour
         
     }
 
-    string ImageDoodleTextDown;
+    string[] ImageDoodleTextDown;
     public void DownLoadImages(int imgNum)
     {
         if (imgNum < MaxImgaeDoodle)
@@ -144,10 +144,13 @@ public class ImageLoader : MonoBehaviour
                        if (!task.IsFaulted && !task.IsCanceled)
                        {
                            StorageMetadata meta = task.Result;
-                            ImageDoodleTextDown = meta.GetCustomMetadata("ImageDoodleText");
+                            ImageDoodleTextDown[i] = meta.GetCustomMetadata("ImageDoodleText");
+                            print("ImageDoodle ["+i+"]====="+ImageDoodleTextDown[i]);
                            
                        }
                     });
+
+                    Thread.Sleep(1000);
             }
             for (int i = 0; i < imgNum; i++)
             {
@@ -160,8 +163,8 @@ public class ImageLoader : MonoBehaviour
                     if (!task.IsFaulted && !task.IsCanceled)
                     {
                         
-                        DebugUI.instance.UpdateDebugForImg(ImageDoodleText);
-                        StartCoroutine(LoadImage(Convert.ToString(task.Result),ImageDoodleTextDown)); //Fetch file from the link
+                        
+                        StartCoroutine(LoadImage(Convert.ToString(task.Result),ImageDoodleTextDown[i])); //Fetch file from the link
                         //DebugUI.instance.UpdateDebugForImg("downloadimage loadimage func call");
                     }
                     else
@@ -187,7 +190,7 @@ public class ImageLoader : MonoBehaviour
                 {
                     if (!task.IsFaulted && !task.IsCanceled)
                     {
-                        StartCoroutine(LoadImage(Convert.ToString(task.Result),ImageDoodleTextDown)); //Fetch file from the link
+                        StartCoroutine(LoadImage(Convert.ToString(task.Result),ImageDoodleTextDown[i])); //Fetch file from the link
                     }
                     else
                     {

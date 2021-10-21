@@ -65,6 +65,29 @@ public class VideoLoader : MonoBehaviour
         //    }
         //});
     }
+
+//////for record video update 1020 - fail
+    public void NewDoodleUpLoad(int doodleNum,string currentPath){
+        StorageReference sr = storageReference.Child("/VideoDoodle/newFile"
+               + (doodleNum - 1).ToString() + ".mp4");
+        doodleVideos.Add(sr);
+
+        sr.PutFileAsync(currentPath)
+  .ContinueWith ((Task<StorageMetadata> task) => {
+    if (task.IsFaulted || task.IsCanceled) {
+      Debug.Log(task.Exception.ToString());
+      // Uh-oh, an error occurred!
+    } else {
+      // Metadata contains file metadata such as size, content-type, and download URL.
+      Firebase.Storage.StorageMetadata metadata = task.Result;
+      
+      Debug.Log("Finished uploading...");
+      
+    }
+  });
+    }
+
+
     string VideoDoodleText;
     public void AddNewDoodle(int doodleNum)
     {
