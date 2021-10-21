@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 44725898}
   - component: {fileID: 44725897}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonNo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 547712661}
   - component: {fileID: 547712660}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonYes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -767,13 +767,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c699b8e1864b4b248acb7a04ede9480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _panSpeed: 1
-  _zoomSpeed: 0.25
-  _referenceCamera: {fileID: 1787361574}
-  _mapManager: {fileID: 555018383}
-  _useDegreeMethod: 0
-  quitMenuPanel: {fileID: 784865900}
---- !u!114 &555018388
+  _map: {fileID: 555018383}
+  _locationStrings:
+  - 37.91259866705415, 128.81707852329626
+  - 37.51839435573888, 127.0280508731892
+  - 35.1672637486974, 129.0585620041643
+  - 37.4798837875729, 126.88249755137498
+  _spawnScale: 1
+  _markerPrefab: {fileID: 1902460863142286027, guid: 697c22daec1f13e4792c349684e8c8d6, type: 3}
+  photos:
+  - {fileID: 2800000, guid: d2b664563ca6d07499cc7a77d8a9de4d, type: 3}
+  - {fileID: 2800000, guid: 96f8d3941aeb0c14b9e7736f4ac216dd, type: 3}
+  - {fileID: 2800000, guid: a86369ac7e014ac48809e6aac6404e58, type: 3}
+  - {fileID: 2800000, guid: 17cb8fb4d6113424caa577b666d545d4, type: 3}
+  titles:
+  - "\uD5A5\uD638 \uD574\uBCC0 \uC815\uB958\uC7A5"
+  - "\uC720\uC815 \uC2DD\uB2F9"
+  - "\uBD80\uC0B0\uC2DC\uBBFC\uACF5\uC6D0"
+  - "\uBA54\uB514\uCE58 \uAD50\uC721\uC13C\uD130"
+--- !u!114 &555018386
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -960,7 +972,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.000061035156}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &784865902
