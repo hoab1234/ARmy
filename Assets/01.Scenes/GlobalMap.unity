@@ -1007,6 +1007,8 @@ MonoBehaviour:
   - 37.4798837875729, 126.88249755137498
   - 35.903481729477164, 127.24462060087477
   - 37.38794104393266, 129.23207610900053
+  - 37.70048465324395, 126.92912238312188
+  - 37.26015232149059, 127.12052241145506
   _spawnScale: 1
   _markerPrefab: {fileID: 1902460863142286027, guid: 697c22daec1f13e4792c349684e8c8d6, type: 3}
   photos:
@@ -1016,6 +1018,8 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 17cb8fb4d6113424caa577b666d545d4, type: 3}
   - {fileID: 2800000, guid: 6d772698877121745a22317115722606, type: 3}
   - {fileID: 2800000, guid: c404970572509a84d9f622d721eddcb5, type: 3}
+  - {fileID: 2800000, guid: b221c853a2a7be34e9e89748813072a7, type: 3}
+  - {fileID: 2800000, guid: 8bb17242674fa564eaa1e72087785bff, type: 3}
   titles:
   - "\uD5A5\uD638 \uD574\uBCC0 \uC815\uB958\uC7A5"
   - "\uC720\uC815 \uC2DD\uB2F9"
@@ -1023,6 +1027,8 @@ MonoBehaviour:
   - "\uBA54\uB514\uCE58 \uAD50\uC721\uC13C\uD130"
   - "\uC544\uC6D0 \uACE0\uD0DD"
   - "\uB9F9\uBC29 \uD574\uC218\uC695\uC7A5"
+  - "\uC77C\uC601\uC5ED"
+  - "\uD55C\uAD6D\uBBFC\uC18D\uCD0C"
 --- !u!114 &555018386
 MonoBehaviour:
   m_ObjectHideFlags: 0
