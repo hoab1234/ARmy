@@ -15,8 +15,8 @@ public class ARFaceThreePoints : MonoBehaviour
 
     int index;
     // public Text textIndex;
-    int[,] targetPos = { { 101, 330 }, { 69, 333 }, { 101, 330 }, { 159, 386 } , { 9, 10 } , { 101, 330 } , { 101, 330 } , { 101, 330 }, { 101, 330 }, { 101, 330 }, { 101, 330 }, { 101, 330 }, { 101, 330 }, { 101, 330 } };
-    //int[] targetPos = new int[] { 101, 330 };
+    int[,] targetPos = { { 205, 425 }, { 69, 333 }, { 159, 386 }, { 205, 425 } , { 9, 10 } , { 205, 425 } , { 205 , 425 } , { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 } };
+    //int[] targetPos = new int[] { 205, 425 };
     public int[,] testArr;
 
     int firstIndex;

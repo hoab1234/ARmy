@@ -30,6 +30,9 @@
         [SerializeField]
         GameObject quitMenuPanel;
 
+        [SerializeField]
+        RectTransform markerInfoPanelRectTransform;
+
         public string[] titles;
         public Texture[] photos;
         public TMP_Text title;
@@ -75,6 +78,8 @@
 
         private void LateUpdate()
         {
+            Debug.Log(markerInfoPanelRectTransform.anchoredPosition.y);
+            if (markerInfoPanelRectTransform.anchoredPosition.y == 0) return;
             if (quitMenuPanel.activeSelf) return;
             if (!_isInitialized) { return; }
 

@@ -760,6 +760,7 @@ MonoBehaviour:
   player: {fileID: 1341642560143511974}
   CameraPositionOrigin: {fileID: 1616166674}
   zoomLevelCheck: {fileID: 1569557360}
+  markerInfoPanelRectTransform: {fileID: 274436663}
 --- !u!1 &242832404
 GameObject:
   m_ObjectHideFlags: 0

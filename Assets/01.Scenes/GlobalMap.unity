@@ -1005,6 +1005,8 @@ MonoBehaviour:
   - 37.51839435573888, 127.0280508731892
   - 35.1672637486974, 129.0585620041643
   - 37.4798837875729, 126.88249755137498
+  - 35.903481729477164, 127.24462060087477
+  - 37.38794104393266, 129.23207610900053
   _spawnScale: 1
   _markerPrefab: {fileID: 1902460863142286027, guid: 697c22daec1f13e4792c349684e8c8d6, type: 3}
   photos:
@@ -1012,11 +1014,15 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 96f8d3941aeb0c14b9e7736f4ac216dd, type: 3}
   - {fileID: 2800000, guid: a86369ac7e014ac48809e6aac6404e58, type: 3}
   - {fileID: 2800000, guid: 17cb8fb4d6113424caa577b666d545d4, type: 3}
+  - {fileID: 2800000, guid: 6d772698877121745a22317115722606, type: 3}
+  - {fileID: 2800000, guid: c404970572509a84d9f622d721eddcb5, type: 3}
   titles:
   - "\uD5A5\uD638 \uD574\uBCC0 \uC815\uB958\uC7A5"
   - "\uC720\uC815 \uC2DD\uB2F9"
-  - "\uBD80\uC0B0\uC2DC\uBBFC\uACF5\uC6D0"
+  - "\uBD80\uC0B0 \uC2DC\uBBFC\uACF5\uC6D0"
   - "\uBA54\uB514\uCE58 \uAD50\uC721\uC13C\uD130"
+  - "\uC544\uC6D0 \uACE0\uD0DD"
+  - "\uB9F9\uBC29 \uD574\uC218\uC695\uC7A5"
 --- !u!114 &555018386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1035,6 +1041,7 @@ MonoBehaviour:
   _mapManager: {fileID: 555018383}
   _useDegreeMethod: 0
   quitMenuPanel: {fileID: 784865900}
+  markerInfoPanelRectTransform: {fileID: 148673251}
   titles: []
   photos: []
   title: {fileID: 238511214}
