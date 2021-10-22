@@ -31,6 +31,9 @@ namespace Mapbox.Examples
         [SerializeField]
         Text zoomLevelCheck;
 
+        [SerializeField]
+        RectTransform markerInfoPanelRectTransform;
+
         Vector2 firstFingerPosition;
         Vector2 lastFingerPosition;
         float angle;
@@ -159,13 +162,14 @@ namespace Mapbox.Examples
                     throw new System.Exception("You must have a reference map assigned!");
                 }
             }
-
             transform.localPosition = new Vector3(0, 0, 2800);
             CameraPositionOrigin.transform.localPosition = new Vector3(0, 0, 2800);
         }
 
         void LateUpdate()
         {
+            Debug.Log(markerInfoPanelRectTransform.anchoredPosition.y);
+            if (markerInfoPanelRectTransform.anchoredPosition.y == 0) return;
             if (quitMenuPanel.activeSelf) return;
             if (Input.touchSupported && Input.touchCount > 0)
             {

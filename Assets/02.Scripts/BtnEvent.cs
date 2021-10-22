@@ -29,10 +29,10 @@ public class BtnEvent : MonoBehaviour
 
     void Start()
     {
-        if(markerInfoPanel != null)
+        if (markerInfoPanel != null)
         {
-        image = markerInfoPanel.GetComponent<Image>();
-        rt = markerInfoPanel.GetComponent<RectTransform>();
+            image = markerInfoPanel.GetComponent<Image>();
+            rt = markerInfoPanel.GetComponent<RectTransform>();
         }
     }
     public void SceneToMain()
@@ -78,9 +78,41 @@ public class BtnEvent : MonoBehaviour
 
     void Update()
     {
-        if (changeToGlobalBtn != null) changeToGlobalBtn.interactable = !QuitPanel.activeSelf;
-        if (changeToLocalBtn != null) changeToLocalBtn.interactable = !QuitPanel.activeSelf;
-        if (focusBtn != null) focusBtn.interactable = !QuitPanel.activeSelf;
+        if (changeToGlobalBtn != null)
+        {
+            if (QuitPanel.activeSelf == true || rt.anchoredPosition.y == 0)
+            {
+                changeToGlobalBtn.interactable = false;
+            }
+            else
+            {
+                changeToGlobalBtn.interactable = true;
+            }
+        }
+
+        if (changeToLocalBtn != null)
+        {
+            if (QuitPanel.activeSelf == true || rt.anchoredPosition.y == 0)
+            {
+                changeToLocalBtn.interactable = false;
+            }
+            else
+            {
+                changeToLocalBtn.interactable = true;
+            }
+        }
+
+        if (focusBtn != null)
+        {
+            if (QuitPanel.activeSelf == true || rt.anchoredPosition.y == 0)
+            {
+                focusBtn.interactable = false;
+            }
+            else
+            {
+                focusBtn.interactable = true;
+            }
+        }
 
         if (Application.platform == RuntimePlatform.Android)
         {
