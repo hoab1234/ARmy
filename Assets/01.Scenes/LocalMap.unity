@@ -607,12 +607,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _map: {fileID: 159634025}
   _locationStrings:
+  - 37.91259866705415, 128.81707852329626
+  - 37.51839435573888, 127.0280508731892
+  - 35.1672637486974, 129.0585620041643
   - 37.48044442560573, 126.88236739778296
-  - 37.55733417067922, 127.13903891370042
+  - 35.903481729477164, 127.24462060087477
+  - 37.38794104393266, 129.23207610900053
+  - 37.70048465324395, 126.92912238312188
+  - 37.26015232149059, 127.12052241145506
   _spawnScale: 5
   _markerPrefab: {fileID: 2157158877643002522, guid: 7b71f00535901ff4cacdeebb68e53d3a, type: 3}
   zoomCamera: {fileID: 234181015}
   isChangeScale: 0
+  photos:
+  - {fileID: 2800000, guid: d2b664563ca6d07499cc7a77d8a9de4d, type: 3}
+  - {fileID: 2800000, guid: 96f8d3941aeb0c14b9e7736f4ac216dd, type: 3}
+  - {fileID: 2800000, guid: a86369ac7e014ac48809e6aac6404e58, type: 3}
+  - {fileID: 2800000, guid: 17cb8fb4d6113424caa577b666d545d4, type: 3}
+  - {fileID: 2800000, guid: 6d772698877121745a22317115722606, type: 3}
+  - {fileID: 2800000, guid: c404970572509a84d9f622d721eddcb5, type: 3}
+  - {fileID: 2800000, guid: b221c853a2a7be34e9e89748813072a7, type: 3}
+  - {fileID: 2800000, guid: 8bb17242674fa564eaa1e72087785bff, type: 3}
+  titles:
+  - "\uD5A5\uD638 \uD574\uBCC0 \uC815\uB958\uC7A5"
+  - "\uC720\uC815 \uC2DD\uB2F9"
+  - "\uBD80\uC0B0 \uC2DC\uBBFC\uACF5\uC6D0"
+  - "\uBA54\uB514\uCE58 \uAD50\uC721\uC13C\uD130"
+  - "\uC544\uC6D0 \uACE0\uD0DD"
+  - "\uB9F9\uBC29 \uD574\uC218\uC695\uC7A5"
+  - "\uC77C\uC601\uC5ED"
+  - "\uD55C\uAD6D\uBBFC\uC18D\uCD0C"
 --- !u!1 &234181014
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,6 +785,11 @@ MonoBehaviour:
   CameraPositionOrigin: {fileID: 1616166674}
   zoomLevelCheck: {fileID: 1569557360}
   markerInfoPanelRectTransform: {fileID: 274436663}
+  sop: {fileID: 159634028}
+  titles: []
+  photos: []
+  title: {fileID: 1142989869}
+  photo: {fileID: 1060505792}
 --- !u!1 &242832404
 GameObject:
   m_ObjectHideFlags: 0
