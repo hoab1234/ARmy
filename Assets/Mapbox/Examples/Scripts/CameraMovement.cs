@@ -83,6 +83,8 @@ namespace Mapbox.Examples
                         // Swipe Control
                         if (touch.phase == TouchPhase.Moved)
                         {
+                            SpawnOnMap.instance.isChangeScale = false;
+
                             lastFingerPosition = touch.position;
                             swipeDistanceX = Mathf.Abs((lastFingerPosition.x - firstFingerPosition.x));
                             swipeDistanceY = Mathf.Abs((lastFingerPosition.y - firstFingerPosition.y));
