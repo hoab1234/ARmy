@@ -30,6 +30,9 @@
 
         public bool isChangeScale = true;
 
+        public Texture[] photos;
+		public string[] titles;
+
         List<GameObject> _spawnedObjects;
 
         void Awake()
@@ -46,6 +49,8 @@
                 var locationString = _locationStrings[i];
                 _locations[i] = Conversions.StringToLatLon(locationString);
                 var instance = Instantiate(_markerPrefab);
+                MarkerInfo markerInfo = instance.GetComponent<MarkerInfo>();
+                markerInfo.index = i;
                 instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
                 instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                 _spawnedObjects.Add(instance);

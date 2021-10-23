@@ -4,6 +4,7 @@ namespace Mapbox.Examples
     using UnityEngine.EventSystems;
     using Mapbox.Unity.Map;
     using UnityEngine.UI;
+    using TMPro;
 
     public class CameraMovement : MonoBehaviour
     {
@@ -33,6 +34,14 @@ namespace Mapbox.Examples
 
         [SerializeField]
         RectTransform markerInfoPanelRectTransform;
+
+        [SerializeField]
+        SpawnOnMap sop;
+
+        public string[] titles;
+        public Texture[] photos;
+        public TMP_Text title;
+        public GameObject photo;
 
         Vector2 firstFingerPosition;
         Vector2 lastFingerPosition;
@@ -64,6 +73,9 @@ namespace Mapbox.Examples
                             int layer = 1 << LayerMask.NameToLayer("Marker");
                             if (Physics.Raycast(ray, out hitInfo, float.MaxValue, layer))
                             {
+                                MarkerInfo markerInfo = hitInfo.transform.parent.GetComponent<MarkerInfo>();
+                                photo.GetComponent<RawImage>().texture = photos[markerInfo.index];
+                                title.text = titles[markerInfo.index];
                                 BtnEvent.instance.OpenMarkerInfoPanel();
                             }
                         }
@@ -145,6 +157,9 @@ namespace Mapbox.Examples
 
         void Awake()
         {
+            titles = sop.titles;
+            photos = sop.photos;
+
             if (_referenceCamera == null)
             {
                 _referenceCamera = GetComponent<Camera>();
