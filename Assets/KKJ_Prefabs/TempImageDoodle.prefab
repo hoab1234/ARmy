@@ -419,7 +419,6 @@ GameObject:
   - component: {fileID: 2125687591036240023}
   - component: {fileID: 135365400633915007}
   - component: {fileID: 4806353454558004293}
-  - component: {fileID: 4806353454558004292}
   m_Layer: 0
   m_Name: TempImageDoodle
   m_TagString: DOODLE
@@ -564,21 +563,6 @@ MonoBehaviour:
   path: 
   distanceFromCamera: 2
   texture: {fileID: 0}
---- !u!114 &4806353454558004292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4806353454558004294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e44d5138f64b76d4f9dbbe0a6d00a6c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mesh: {fileID: 0}
-  isImageDoodle: 1
-  textures: []
 --- !u!1 &7034001521185229172
 GameObject:
   m_ObjectHideFlags: 0

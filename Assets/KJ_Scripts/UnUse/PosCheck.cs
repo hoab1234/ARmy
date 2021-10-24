@@ -5,12 +5,10 @@ using UnityEngine;
 public class PosCheck : MonoBehaviour
 {
     
-
+    
     // Start is called before the first frame update
     public void Start()
     {
-       
-
         StartCoroutine(ARPOSCHECK());    
     }
 
@@ -30,4 +28,8 @@ public class PosCheck : MonoBehaviour
             
         }
     }
+
+    
+    
+
 }

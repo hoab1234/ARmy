@@ -52,21 +52,24 @@ public class ARCamFacingDir : MonoBehaviour
     }
 
     bool isFacingDirWorld = true;
-    public void FacingWorldorUser()
+    public void FacingDirChange()
     {
         if (isFacingDirWorld)
         {
             ToUser();
             isFacingDirWorld = false;
+            ARFaceThreePoints.inst.SetNoneFaceFilter();
         }
         else
         {
             ToWorld();
             isFacingDirWorld = true;
+            ARFaceThreePoints.inst.SetNoneFaceFilter();
         }
     }
     private void ToWorld()
     {
+        ShowPrefab();
         print("facing direction ==== world");
         m_CameraManager.requestedFacingDirection = CameraFacingDirection.World;
         ARAnchorOnOff(true);
@@ -75,14 +78,27 @@ public class ARCamFacingDir : MonoBehaviour
     }
     private void ToUser()
     {
+        HidePrefab();
         print("facing direction ====  user");
         m_CameraManager.requestedFacingDirection = CameraFacingDirection.User;
         ARAnchorOnOff(false);
         ARFaceOnOff(true);
     }
 
-
-
+    GameObject prefab;
+    public void HidePrefab(){
+        prefab = GameObject.FindGameObjectWithTag("ARMYROAD");
+        if(prefab == null) return;
+        print(prefab.name);
+        prefab.SetActive(false);
+    }
+    public void ShowPrefab(){
+        if(prefab == null) return;
+        prefab.SetActive(true);
+        
+        prefab = GameObject.FindGameObjectWithTag("ARMYROAD");
+        print(prefab.name);
+    }
     public void ARAnchorOnOff(bool BOOL)
     {
         if (BOOL)
@@ -108,15 +124,13 @@ public class ARCamFacingDir : MonoBehaviour
         if (BOOL)
         {
             m_ARFaceManager.enabled = true;
-
             m_ARFaceThreePoints.enabled = true;
-
         }
         else
         {
             m_ARFaceManager.enabled = false;
-
             m_ARFaceThreePoints.enabled = false;
+            
         }
     }
 

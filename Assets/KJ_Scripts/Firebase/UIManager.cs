@@ -7,6 +7,8 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
 
+    public GameObject FaceFilter;
+
     public GameObject UiUpLoad;
     public GameObject UiIconX;
     public GameObject UIBackIcon;
@@ -233,6 +235,17 @@ public class UIManager : MonoBehaviour
         {
             UIFaceFilterScroll.SetActive(BOOL);
             useFilter= true;
+        }
+    }
+
+    public void FaceFilterStickerOnOff(bool BOOL){
+         if (BOOL)
+        {
+            FaceFilter.SetActive(BOOL);
+        }
+        else
+        {
+            FaceFilter.SetActive(BOOL);
         }
     }
 }
