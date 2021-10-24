@@ -470,7 +470,7 @@ RectTransform:
   m_Children:
   - {fileID: 229964396}
   m_Father: {fileID: 363172128}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1617,7 +1617,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 19}
+  m_AnchoredPosition: {x: 0, y: 11}
   m_SizeDelta: {x: 0, y: 81.6507}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &229964397
@@ -2204,14 +2204,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363172127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 720, y: 144.69995, z: 0}
+  m_LocalPosition: {x: 2345, y: -400, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 436450467}
   - {fileID: 15819545}
   - {fileID: 1352190535}
   - {fileID: 732686161}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &363172129
 MonoBehaviour:
@@ -3143,18 +3144,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436450463}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 952156274}
   - {fileID: 377940962}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 363172128}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -2345, y: 400}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &436450468
@@ -3180,7 +3181,7 @@ CanvasGroup:
   m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
+  m_IgnoreParentGroups: 1
 --- !u!1 &449112236
 GameObject:
   m_ObjectHideFlags: 0
@@ -3558,14 +3559,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.173096, y: 1.173096, z: 1.173096}
-  m_Children:
-  - {fileID: 1531556761}
+  m_Children: []
   m_Father: {fileID: 1352190535}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 182}
+  m_AnchoredPosition: {x: 0, y: 174.00006}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &629195942
@@ -3626,7 +3626,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1954691482}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: UISelectIconOnOff
+        m_MethodName: UIChangeCamFacingDirIconOnOff
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3638,20 +3638,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1954691482}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: UIChangeCamFacingDirIconOnOff
+        m_MethodName: UIFaceFilterScrollOnOff
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 363172129}
-        m_TargetAssemblyTypeName: CanvasGroupControll, Assembly-CSharp
-        m_MethodName: SetCanvasForScreenShot
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4320,7 +4308,7 @@ Transform:
   - {fileID: 746259864}
   - {fileID: 1954691483}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &712315106
 PrefabInstance:
@@ -4525,7 +4513,7 @@ RectTransform:
   m_Children:
   - {fileID: 418636219}
   m_Father: {fileID: 363172128}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4817,7 +4805,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2066306693}
         m_TargetAssemblyTypeName: ARCamFacingDir, Assembly-CSharp
-        m_MethodName: FacingWorldorUser
+        m_MethodName: FacingDirChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7160,6 +7148,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2066306694}
+        m_TargetAssemblyTypeName: ARFaceThreePoints, Assembly-CSharp
+        m_MethodName: SetNoneFaceFilter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1129142007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7756,7 +7756,7 @@ Transform:
   - {fileID: 27594567658521822}
   - {fileID: 342021905590730621}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1232681642
 GameObject:
@@ -7910,7 +7910,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241869637}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.75275546, y: 7.7075, z: 7.7075}
   m_Children: []
@@ -8274,6 +8274,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1954691482}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: XiconForContentsOnOff
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1954691482}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: UISelectIconOnOff
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1274135832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8486,7 +8510,7 @@ RectTransform:
   - {fileID: 1907534712}
   - {fileID: 1443357440}
   m_Father: {fileID: 363172128}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9714,85 +9738,6 @@ Transform:
   m_Father: {fileID: 708338457}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1531556760
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1531556761}
-  - component: {fileID: 1531556763}
-  - component: {fileID: 1531556762}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1531556761
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531556760}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 629195941}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1531556762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531556760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 80
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 0
-    m_MaxSize: 80
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
---- !u!222 &1531556763
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531556760}
-  m_CullTransparentMesh: 1
 --- !u!1 &1539393824
 GameObject:
   m_ObjectHideFlags: 0
@@ -10017,7 +9962,7 @@ Transform:
   - {fileID: 500086659}
   - {fileID: 853036145}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1590821390 stripped
 Transform:
@@ -11166,6 +11111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ec4b79acc358c4bb86fd0341affa8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FaceFilter: {fileID: 1587444146}
   UiUpLoad: {fileID: 1274135829}
   UiIconX: {fileID: 1079536887}
   UIBackIcon: {fileID: 1241869637}
@@ -12244,6 +12190,10 @@ PrefabInstance:
     - target: {fileID: 1284709219660787814, guid: 4f1d778871e179d44931f9b1b6fe3c01, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806353454558004293, guid: 4f1d778871e179d44931f9b1b6fe3c01, type: 3}
+      propertyPath: maxImgDoodleSize
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 4806353454558004294, guid: 4f1d778871e179d44931f9b1b6fe3c01, type: 3}
       propertyPath: m_Name

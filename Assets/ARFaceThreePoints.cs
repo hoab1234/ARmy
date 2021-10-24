@@ -9,13 +9,16 @@ using UnityEngine.UI;
 
 public class ARFaceThreePoints : MonoBehaviour
 {
+    public static ARFaceThreePoints inst;
+
+
     public Transform[] right;
     public Transform[] left;
     ARFaceManager aRFaceManager;
 
     int index;
     // public Text textIndex;
-    int[,] targetPos = { { 205, 425 }, { 69, 333 }, { 159, 386 }, { 205, 425 } , { 9, 10 } , { 205, 425 } , { 205 , 425 } , { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 } };
+    int[,] targetPos = { { 205, 425 }, { 69, 333 }, { 159, 386 }, { 205, 425 }, { 9, 10 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 } };
     //int[] targetPos = new int[] { 205, 425 };
     public int[,] testArr;
 
@@ -44,10 +47,14 @@ public class ARFaceThreePoints : MonoBehaviour
 
     void Awake()
     {
+        if(inst == null)
+        {
+            inst = this;
+        }
         //INDEX = 0;
         aRFaceManager = GetComponent<ARFaceManager>();
 
-        for(int i = 0; i < right.Length; i++)
+        for (int i = 0; i < right.Length; i++)
         {
             right[i].gameObject.SetActive(false);
         }
@@ -143,7 +150,25 @@ public class ARFaceThreePoints : MonoBehaviour
 
         for (int i = 0; i < right.Length; i++)
         {
-            if(i == firstIndex) right[i].gameObject.SetActive(true);
+            if (i == firstIndex) right[i].gameObject.SetActive(true);
+            else right[i].gameObject.SetActive(false);
+        }
+
+        for (int i = 0; i < left.Length; i++)
+        {
+            if (i == firstIndex) left[i].gameObject.SetActive(true);
+            else left[i].gameObject.SetActive(false);
+        }
+    }
+
+    // KKJ
+    public void SetNoneFaceFilter()
+    {
+        firstIndex = 0;
+
+        for (int i = 0; i < right.Length; i++)
+        {
+            if (i == firstIndex) right[i].gameObject.SetActive(true);
             else right[i].gameObject.SetActive(false);
         }
 
