@@ -3631,7 +3631,7 @@ MonoBehaviour:
   changeToGlobalBtn: {fileID: 901043649}
   changeToLocalBtn: {fileID: 0}
   focusBtn: {fileID: 573506531}
-  cameraPositionOrigin: {fileID: 0}
+  cameraPositionOrigin: {fileID: 1616166675}
   isFocusing: 0
 --- !u!1 &13467591788906284
 GameObject:

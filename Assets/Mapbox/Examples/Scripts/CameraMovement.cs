@@ -83,6 +83,7 @@ namespace Mapbox.Examples
                         // Swipe Control
                         if (touch.phase == TouchPhase.Moved)
                         {
+                            BtnEvent.instance.isFocusing = false;
                             SpawnOnMap.instance.isChangeScale = false;
 
                             lastFingerPosition = touch.position;
@@ -105,13 +106,11 @@ namespace Mapbox.Examples
 
                         if (touch.phase == TouchPhase.Canceled || touch.phase == TouchPhase.Ended)
                         {
-                            if (transform.localPosition.x != CameraPositionOrigin.transform.localPosition.x && transform.localPosition.y != CameraPositionOrigin.transform.localPosition.y)
-                            {
-                                transform.position = CameraPositionOrigin.transform.position;
-                                transform.LookAt(player.transform);
-                                PlayerRigPos.instance.isChangeScale = true;
-                                SpawnOnMap.instance.isChangeScale = true;
-                            }
+                            transform.position = CameraPositionOrigin.transform.position;
+                            transform.LookAt(player.transform);
+                            PlayerRigPos.instance.isChangeScale = true;
+                            SpawnOnMap.instance.isChangeScale = true;
+
                         }
                     }
                     break;
@@ -185,7 +184,8 @@ namespace Mapbox.Examples
 
         void LateUpdate()
         {
-            Debug.Log(markerInfoPanelRectTransform.anchoredPosition.y);
+            // Debug.Log(transform.localPosition);
+            // Debug.Log(CameraPositionOrigin.transform.localPosition);
             if (markerInfoPanelRectTransform.anchoredPosition.y == 0) return;
             if (quitMenuPanel.activeSelf) return;
             if (Input.touchSupported && Input.touchCount > 0)
