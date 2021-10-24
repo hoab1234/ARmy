@@ -618,7 +618,7 @@ MonoBehaviour:
   _spawnScale: 5
   _markerPrefab: {fileID: 2157158877643002522, guid: 7b71f00535901ff4cacdeebb68e53d3a, type: 3}
   zoomCamera: {fileID: 234181015}
-  isChangeScale: 0
+  isChangeScale: 1
   photos:
   - {fileID: 2800000, guid: d2b664563ca6d07499cc7a77d8a9de4d, type: 3}
   - {fileID: 2800000, guid: 96f8d3941aeb0c14b9e7736f4ac216dd, type: 3}
@@ -3631,7 +3631,7 @@ MonoBehaviour:
   changeToGlobalBtn: {fileID: 901043649}
   changeToLocalBtn: {fileID: 0}
   focusBtn: {fileID: 573506531}
-  cameraPositionOrigin: {fileID: 0}
+  cameraPositionOrigin: {fileID: 1616166675}
   isFocusing: 0
 --- !u!1 &13467591788906284
 GameObject:
