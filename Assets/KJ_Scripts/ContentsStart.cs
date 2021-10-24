@@ -10,7 +10,7 @@ public class ContentsStart : MonoBehaviour
     void Start()
     {
         UIManager.instance.GuildCanvasGroupOff();
-        UIManager.instance.UICameraIconOn();
+        UIManager.instance.UISelectIconOnOff(true);
     }
 
     // Update is called once per frame

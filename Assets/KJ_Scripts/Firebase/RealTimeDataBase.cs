@@ -93,7 +93,7 @@ public class RealTimeDataBase : MonoBehaviour
         print(ImgNum);
         reference.Child("ImageNum").SetValueAsync(ImgNum);
         UIManager.instance.UiUpLoadOff();
-        ImageLoader.instance.AddNewDoodle(ImgNum);
+        //ImageLoader.instance.AddNewDoodle(ImgNum);
         
     }
     
