@@ -121,8 +121,8 @@ public class UIManager : MonoBehaviour
     public void UITempImageDoodleOn(string path)
     {
         UITempImageDoodle.SetActive(true);
-        UiUpLoadOn();
         UITempImageDoodle.GetComponent<TemporaryDoodle>().SetImage(path);
+        UiUpLoadOn();
     }
     public void UITempVideoDoodleOn()
     {
