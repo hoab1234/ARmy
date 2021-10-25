@@ -52,6 +52,7 @@
                 MarkerInfo markerInfo = instance.GetComponent<MarkerInfo>();
                 markerInfo.index = i;
                 instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
+                instance.transform.localPosition = new Vector3(instance.transform.localPosition.x, 1.6f *(11 - GetNewRangeValue(-180, 3200, zoomCamera.transform.localPosition.z, 1, 10)), instance.transform.localPosition.z);
                 instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                 _spawnedObjects.Add(instance);
             }
@@ -61,10 +62,11 @@
 
         private void Update()
         {
+            Debug.Log(isChangeScale);
             if (isChangeScale)
             {
                 ChangeSpawnedObjectScaleAndY();
-                isChangeScale = false;
+                // isChangeScale = false;
             }
         }
 

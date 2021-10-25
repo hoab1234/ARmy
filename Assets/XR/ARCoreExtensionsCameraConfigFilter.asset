@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdf8f56b422e1904dabd70565b5da097, type: 3}
+  m_Script: {fileID: 11500000, guid: 269129ba34e5b43d5aac34839ce7f646, type: 3}
   m_Name: ARCoreExtensionsCameraConfigFilter
   m_EditorClassIdentifier: 
   TargetCameraFramerate: 3

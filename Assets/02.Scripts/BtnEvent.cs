@@ -78,6 +78,8 @@ public class BtnEvent : MonoBehaviour
 
     void Update()
     {
+        Debug.Log($"isFocusing: {isFocusing}");
+
         if (changeToGlobalBtn != null)
         {
             if (QuitPanel.activeSelf == true || rt.anchoredPosition.y == 0)
@@ -140,8 +142,9 @@ public class BtnEvent : MonoBehaviour
                 PlayerRigPos.instance.isChangeScale = true;
                 SpawnOnMap.instance.isChangeScale = true;
                 Camera.main.transform.localPosition = new Vector3(Camera.main.transform.localPosition.x, Camera.main.transform.localPosition.y, Mathf.Lerp(Camera.main.transform.localPosition.z, 3200, 10 * Time.deltaTime));
-                cameraPositionOrigin.localPosition = Camera.main.transform.localPosition;
-                // cameraPositionOrigin.localPosition = new Vector3(cameraPositionOrigin.localPosition.x, cameraPositionOrigin.localPosition.y, Mathf.Lerp(cameraPositionOrigin.localPosition.z, 3200, 10 * Time.deltaTime));
+                //cameraPositionOrigin.localPosition = Camera.main.transform.localPosition;
+                cameraPositionOrigin.localPosition = new Vector3(cameraPositionOrigin.localPosition.x, cameraPositionOrigin.localPosition.y, Mathf.Lerp(cameraPositionOrigin.localPosition.z, 3200, 10 * Time.deltaTime));
+                //isFocusing = false;
             }
             else
             {
