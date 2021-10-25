@@ -78,7 +78,7 @@ public class BtnEvent : MonoBehaviour
 
     void Update()
     {
-        Debug.Log($"isFocusing: {isFocusing}");
+        //Debug.Log($"isFocusing: {isFocusing}");
 
         if (changeToGlobalBtn != null)
         {

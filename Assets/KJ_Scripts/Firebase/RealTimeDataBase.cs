@@ -54,7 +54,6 @@ public class RealTimeDataBase : MonoBehaviour
             ImgNum = Convert.ToInt32(snapshot.Value);
             print("imgnum =====" + ImgNum);
             ImageLoader.instance.DownLoadImages(ImgNum);
-            DebugUI.instance.UpdateDebugForImg("getimagenum -> downloadCall" + ImgNum.ToString());
             // Do something with snapshot...
         }
     });
