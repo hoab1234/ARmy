@@ -78,8 +78,6 @@ public class BtnEvent : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log($"isFocusing: {isFocusing}");
-
         if (changeToGlobalBtn != null)
         {
             if (QuitPanel.activeSelf == true || rt.anchoredPosition.y == 0)
