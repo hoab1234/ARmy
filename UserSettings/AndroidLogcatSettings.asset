@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "2173d2e0070d7ece",
         "name": "com.AIRY.AIRY101",
-        "processId": 8908,
+        "processId": 10103,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -96,6 +96,12 @@
             "deviceId": "2173d2e0070d7ece",
             "name": "com.AIRY.AIRY101",
             "processId": 8908,
+            "exited": false
+        },
+        {
+            "deviceId": "2173d2e0070d7ece",
+            "name": "com.AIRY.AIRY101",
+            "processId": 10103,
             "exited": false
         },
         {

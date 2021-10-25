@@ -34,7 +34,7 @@ public class Doodle : MonoBehaviour
         {
             matDic.Add(i, textures[i]);
         }
-        mesh = GetComponentInChildren<MeshRenderer>();
+        //mesh = GetComponentInChildren<MeshRenderer>();
     }
     private void Start()
     {
