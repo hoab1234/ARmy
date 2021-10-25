@@ -27,6 +27,8 @@ public class CloudAnchorManager : MonoBehaviour
     public Button resolveButton;    // 클라우드 앵커 조회
     public Button resetButton;      // 리셋
 
+    bool isResolving = true;
+
     // 메시지 출력 텍스트
     public Text messageText;
 
@@ -78,7 +80,6 @@ public class CloudAnchorManager : MonoBehaviour
         hostButton.onClick.AddListener(() => OnHostClick());
         resolveButton.onClick.AddListener(() => OnResolveClick());
         resetButton.onClick.AddListener(() => OnResetClick());
-
         StartCoroutine("AutoResolve");
     }
 

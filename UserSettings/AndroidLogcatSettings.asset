@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "2173d2e0070d7ece",
         "name": "com.AIRY.AIRY101",
-        "processId": 17977,
+        "processId": 6889,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,86 +11,32 @@
         {
             "deviceId": "2173d2e0070d7ece",
             "name": "com.AIRY.AIRY101",
-            "processId": 24422,
+            "processId": 25784,
             "exited": true
         },
         {
             "deviceId": "2173d2e0070d7ece",
             "name": "com.AIRY.AIRY101",
-            "processId": 9180,
+            "processId": 378,
             "exited": true
         },
         {
             "deviceId": "2173d2e0070d7ece",
             "name": "com.AIRY.AIRY101",
-            "processId": 17694,
+            "processId": 1759,
             "exited": true
         },
         {
             "deviceId": "2173d2e0070d7ece",
             "name": "com.AIRY.AIRY101",
-            "processId": 12302,
+            "processId": 5300,
             "exited": true
         },
         {
             "deviceId": "2173d2e0070d7ece",
             "name": "com.AIRY.AIRY101",
-            "processId": 11049,
+            "processId": 6889,
             "exited": true
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 19876,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 3573,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 4748,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 10103,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 1426,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 1427,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 30468,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 23120,
-            "exited": false
-        },
-        {
-            "deviceId": "2173d2e0070d7ece",
-            "name": "com.AIRY.AIRY101",
-            "processId": 17175,
-            "exited": false
         },
         {
             "deviceId": "R39M204E7GH",

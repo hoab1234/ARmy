@@ -23,11 +23,16 @@ public class ContentsStart : MonoBehaviour
         UIManager.instance.GuildCanvasGroupOff();
         UIManager.instance.UISelectIconOnOff(true);
 
+        StartCoroutine(CheckPos());
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    IEnumerator CheckPos(){
+        while(true){
+
+        yield return new WaitForSeconds(0.5f);
+        print("transform position ========" + transform.position);
+        print("Local position ========" + transform.localPosition);
+        }
     }
 }
