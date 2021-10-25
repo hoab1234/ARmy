@@ -63,7 +63,6 @@
 
         private void Update()
         {
-            Debug.Log(isChangeScale);
             if (isChangeScale)
             {
                 ChangeSpawnedObjectScaleAndY();

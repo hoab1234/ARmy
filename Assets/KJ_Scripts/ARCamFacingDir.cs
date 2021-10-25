@@ -175,9 +175,13 @@ public class ARCamFacingDir : MonoBehaviour
     {
         if (m_CameraManager.requestedFacingDirection == CameraFacingDirection.User)
         {
-            FacingDirChange();
-
+            
+            StartCoroutine(FacingDirChangeDelay());
         }
+    }
+    IEnumerator FacingDirChangeDelay(){
+        yield return new WaitForSeconds(0.5f);
+        FacingDirChange();
     }
 }
 
