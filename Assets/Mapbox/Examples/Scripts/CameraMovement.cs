@@ -38,10 +38,12 @@ namespace Mapbox.Examples
         [SerializeField]
         SpawnOnMap sop;
 
-        public string[] titles;
-        public Texture[] photos;
+        string[] titles;
+        Texture[] photos;
+        string[] infos;
         public TMP_Text title;
         public GameObject photo;
+        public TMP_Text info;
 
         Vector2 firstFingerPosition;
         Vector2 lastFingerPosition;
@@ -76,6 +78,7 @@ namespace Mapbox.Examples
                                 MarkerInfo markerInfo = hitInfo.transform.parent.GetComponent<MarkerInfo>();
                                 photo.GetComponent<RawImage>().texture = photos[markerInfo.index];
                                 title.text = titles[markerInfo.index];
+                                info.text = infos[markerInfo.index].Replace("\\n", "\n");
                                 BtnEvent.instance.OpenMarkerInfoPanel();
                             }
                         }
@@ -160,6 +163,7 @@ namespace Mapbox.Examples
         {
             titles = sop.titles;
             photos = sop.photos;
+            infos = sop.infos;
 
             if (_referenceCamera == null)
             {

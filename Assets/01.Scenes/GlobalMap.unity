@@ -335,6 +335,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89872623}
   m_CullTransparentMesh: 1
+--- !u!1 &146576490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 146576491}
+  - component: {fileID: 146576493}
+  - component: {fileID: 146576492}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &146576491
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146576490}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1113934884}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -80, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &146576492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146576490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: e8525bbaa1cbe9946a64d4745abf939b, type: 2}
+  m_sharedMaterial: {fileID: -3730475380864374699, guid: e8525bbaa1cbe9946a64d4745abf939b, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294938828
+  m_fontColor: {r: 0.8, g: 0.5647059, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 34
+  m_fontSizeBase: 34
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &146576493
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146576490}
+  m_CullTransparentMesh: 1
 --- !u!1 &148673250
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,7 +618,7 @@ GameObject:
   - component: {fileID: 238511215}
   - component: {fileID: 238511214}
   m_Layer: 5
-  m_Name: Text (TMP) Title
+  m_Name: TextTitle (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -529,7 +663,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uD5A5\uD638 \uD574\uBCC0 \uC815\uB958\uC7A5"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e8525bbaa1cbe9946a64d4745abf939b, type: 2}
   m_sharedMaterial: {fileID: -3730475380864374699, guid: e8525bbaa1cbe9946a64d4745abf939b, type: 2}
@@ -556,7 +690,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1009,17 +1143,23 @@ MonoBehaviour:
   - 37.38794104393266, 129.23207610900053
   - 37.70048465324395, 126.92912238312188
   - 37.26015232149059, 127.12052241145506
+  - 37.56633891588576, 127.43015168437893
+  - 37.6002905992864, 126.99340391300146
+  - 35.04684586327165, 128.96624918935962
   _spawnScale: 1
   _markerPrefab: {fileID: 1902460863142286027, guid: 697c22daec1f13e4792c349684e8c8d6, type: 3}
   photos:
   - {fileID: 2800000, guid: d2b664563ca6d07499cc7a77d8a9de4d, type: 3}
   - {fileID: 2800000, guid: 96f8d3941aeb0c14b9e7736f4ac216dd, type: 3}
   - {fileID: 2800000, guid: a86369ac7e014ac48809e6aac6404e58, type: 3}
-  - {fileID: 2800000, guid: 17cb8fb4d6113424caa577b666d545d4, type: 3}
+  - {fileID: 2800000, guid: c5600eac69ceae04e96d88a348719ed7, type: 3}
   - {fileID: 2800000, guid: 6d772698877121745a22317115722606, type: 3}
   - {fileID: 2800000, guid: c404970572509a84d9f622d721eddcb5, type: 3}
   - {fileID: 2800000, guid: b221c853a2a7be34e9e89748813072a7, type: 3}
   - {fileID: 2800000, guid: 8bb17242674fa564eaa1e72087785bff, type: 3}
+  - {fileID: 2800000, guid: 6a53ce4e50077fe4280e3155c4c7e5cc, type: 3}
+  - {fileID: 2800000, guid: 64cafbe61aebf0548a869e57e8ec9805, type: 3}
+  - {fileID: 2800000, guid: 08d14b7bd53fa404a8a528aa988382ac, type: 3}
   titles:
   - "\uD5A5\uD638 \uD574\uBCC0 \uC815\uB958\uC7A5"
   - "\uC720\uC815 \uC2DD\uB2F9"
@@ -1028,7 +1168,66 @@ MonoBehaviour:
   - "\uC544\uC6D0 \uACE0\uD0DD"
   - "\uB9F9\uBC29 \uD574\uC218\uC695\uC7A5"
   - "\uC77C\uC601\uC5ED"
-  - "\uD55C\uAD6D\uBBFC\uC18D\uCD0C"
+  - "\uB300\uC7A5\uAE08 \uD30C\uD06C"
+  - "\uC11C\uD6C4\uB9AC\uC232"
+  - "\uD55C\uAD6D\uAC00\uAD6C\uBC15\uBB3C\uAD00"
+  - "\uB2E4\uB300\uD3EC \uD574\uC218\uC695\uC7A5"
+  infos:
+  - "\uC704\uCE58 : \uAC15\uC6D0\uB3C4 \uAC15\uB989\uC2DC \uC8FC\uBB38\uC9C4\uC74D
+    \uD5A5\uD638\uB9AC \\n\\n\uC124\uBA85 : <You Never Walk Alone>\uC568\uBC94\uC758
+    \uC7C8\uCF13\uC0AC\uC9C4 \uCD2C\uC601\uC9C0.\\n\uC678\uAD6D\uC778\uC774 \uAF3D\uC740
+    '\uBC29\uD0C4\uD22C\uC5B4' \uCD5C\uACE0 \uC7A5\uC18C\uB85C \uC120\uC815\uB418\uC5C8\uB2E4."
+  - "\uC704\uCE58 : \uC11C\uC6B8\uD2B9\uBCC4\uC2DC \uAC15\uB0A8\uAD6C \uB17C\uD604\uB3D9
+    \uB3C4\uC0B0\uB300\uB85C28\uAE38 14\\n\\n\uC124\uBA85 : \uBA64\uBC84\uB4E4\uC774
+    \uC5F0\uC2B5\uC0DD \uC2DC\uC808\uBD80\uD130 \uC5C4\uB9C8\uC758 \uC190\uB9DB\uC774
+    \uADF8\uB9AC\uC6B8 \uB54C \uCC3E\uB358 \uD55C\uC2DD\uC9D1.\\n\uCD08\uCC3D\uAE30
+    \uC5F0\uC2B5\uC2E4\uACFC \uAC19\uC740 \uAC74\uBB3C\uC5D0 \uC704\uCE58\uD574 \uC788\uB2E4."
+  - "\uC704\uCE58 : \uBD80\uC0B0\uAD11\uC5ED\uC2DC \uBD80\uC0B0\uC9C4\uAD6C \uBC94\uC804\uB3D9
+    \uC2DC\uBBFC\uACF5\uC6D0\uB85C 73\\n\\n\uC124\uBA85 : \uD55C\uCABD \uBC1C\uC744
+    \uB0B4\uB51B\uC73C\uBA70 \uAE4C\uB9CC\uC0C9 \uC6B0\uC0B0\uC744 \uB192\uC774 \uB4E0
+    \uBDD4\uC758 \uC0AC\uC9C4, \uADF8 \uC7A5\uC18C \uADF8\uB300\uB85C \uBC1C\uC790\uAD6D\uC774
+    \uB0A8\uACA8\uC838 \uC788\uB2E4.\\n\uAD70\uBD80\uB300\uC5D0\uC11C \uC2DC\uBBFC\uC758
+    \uD488\uC73C\uB85C \uB3CC\uC544\uC628 \uC18C\uC911\uD55C \uACF5\uC6D0\uC774\uB2E4."
+  - "\uC704\uCE58 : \uC11C\uC6B8\uD2B9\uBCC4\uC2DC \uAE08\uCC9C\uAD6C \uAC00\uC0B0\uB3D9
+    \uAC00\uC0B0\uB514\uC9C0\uD1381\uB85C 168 \uC6B0\uB9BC\uB77C\uC774\uC628\uC2A4\uBC38\uB9AC
+    A\uB3D9 304-307\uD638\\n\\n\uC124\uBA85 : \uC544\uBBF8 \uD558\uB098 \uBA38\uAE00
+    \uB458(\uAE40\uACBD\uC900, \uAE40\uC2B9\uD658, \uB178\uC5F0\uC8FC)"
+  - "\uC704\uCE58 : \uC804\uB77C\uBD81\uB3C4 \uC644\uC8FC\uAD70 \uC18C\uC591\uBA74
+    \uC1A1\uAD11\uC218\uB9CC\uB85C 516-7\\n\\n\uC124\uBA85 : [2019 BTS Summer Package]
+    \uCD2C\uC601\uC9C0.\\n\uD604\uB300\uC640 \uC804\uD1B5\uC774 \uC790\uC5F0 \uC18D\uC5D0
+    \uC808\uBB18\uD558\uAC8C \uC5B4\uC6B0\uB7EC\uC838 \uC5EC\uC720\uB86D\uAC8C \uB458\uB7EC\uBCF4\uAE30
+    \uC88B\uB2E4."
+  - "\uC704\uCE58 : \uAC15\uC6D0\uB3C4 \uC0BC\uCC99\uC2DC \uADFC\uB355\uBA74 \uD574\uB9F9\uBC29\uB9AC
+    12-1\\n\\n\uC124\uBA85 : 'Permission To Dance'\uC758 \uD654\uBCF4 \uCD2C\uC601\uC9C0.\\n\uBC31\uC0AC\uC7A5\uC5D0
+    \uD654\uB824\uD55C \uC0C9\uAC10\uC758 \uD30C\uB77C\uC194\uACFC \uC120\uBCA0\uB4DC,
+    \uBE44\uCE58\uBC1C\uB9AC\uBCFC \uC138\uD2B8\uAC00 \uC124\uCE58\uB418\uC5B4 \uD3EC\uD1A0\uC874\uC73C\uB85C
+    \uC190\uAF3D\uD78C\uB2E4."
+  - "\uC704\uCE58 : \uACBD\uAE30 \uC591\uC8FC\uC2DC \uC7A5\uD765\uBA74 \uC0BC\uC0C1\uB9AC
+    327\\n\\n\uC124\uBA85 : '\uBD04\uB0A0'\uC758 \uBBA4\uC9C1\uBE44\uB514\uC624 \uC18D
+    \uBDD4\uAC00 \uCCA0\uAE38 \uC704\uC5D0 \uADC0\uB97C \uB300\uACE0 \uC788\uB358
+    \uC7A5\uBA74\uC758 \uCD2C\uC601\uC9C0.\\n\uB179\uC2A8 \uCCA0\uACFC \uBC97\uACA8\uC9C4
+    \uD398\uC778\uD2B8 \uC790\uAD6D\uB9C8\uC800 \uBA4B\uC2A4\uB7EC\uC6B4 \uACF5\uAC04\uC774\uB2E4."
+  - "\uC704\uCE58 : \uACBD\uAE30\uB3C4 \uC6A9\uC778\uC2DC \uCC98\uC778\uAD6C \uBC31\uC554\uBA74
+    \uC6A9\uCC9C\uB9AC 778-1\\n\\n\uC124\uBA85 : SUGA\uC758 \uAC1C\uC778\uC791\uC5C5
+    [AGUST D] 2\uC9D1 <D-2>\uC758 \uD0C0\uC774\uD2C0\uACE1 '\uB300\uCDE8\uD0C0'\uC758
+    \uBBA4\uC9C1\uBE44\uB514\uC624 \uCD2C\uC601\uC9C0.\\n\uD55C\uAD6D \uACE0\uC720\uC758
+    \uBA4B\uACFC \uC815\uCDE8\uB97C \uB290\uB084 \uC218 \uC788\uB2E4."
+  - "\uC704\uCE58 : \uACBD\uAE30 \uC591\uD3C9\uAD70 \uC11C\uC885\uBA74 \uAC70\uBD81\uBC14\uC7041\uAE38
+    200\\n\\n\uC124\uBA85 : [2019 Season Greeting]\uCD2C\uC601\uC9C0\\n\uACE0\uC694\uD558\uAC8C
+    \uC232\uBA4D\uB54C\uB9AC\uAE30 \uC88B\uC740 \uACF3\uC73C\uB85C \uBCF8\uC5F0\uC758
+    \uBAA8\uC2B5\uC744 \uD574\uCE58\uC9C0 \uC54A\uACE0 \uAD00\uB9AC\uD558\uACE0 \uC788\uC5B4
+    \uC790\uC5F0\uC744 \uB354\uC6B1 \uAC00\uAE5D\uAC8C \uB290\uB084 \uC218 \uC788\uB2E4."
+  - "\uC704\uCE58 : \uC11C\uC6B8 \uC131\uBD81\uAD6C \uB300\uC0AC\uAD00\uB85C 121\\n\\n\uC124\uBA85
+    : '\uC720\uD034\uC988 \uC628\uB354 \uBE14\uB85D-BTS\uD3B8' \uCD2C\uC601\uC9C0.\\n2000\uC5EC
+    \uC810\uC758 \uD55C\uAD6D\uC804\uD1B5 \uAC00\uAD6C\uC640 10\uC5EC\uC810\uC758
+    \uD55C\uAD6D \uC804\uD1B5\uD55C\uC625\uC744 \uC18C\uC7A5\uD558\uACE0 \uC788\uB294
+    \uACF3\uC73C\uB85C \uC11C\uC6B8\uC5D0\uC11C \uAC00\uC7A5 \uC544\uB984\uB2E4\uC6B4
+    \uAC74\uCD95\uBB3C \uC911 \uD558\uB098\uB85C \uAF3D\uD78C\uB2E4."
+  - "\uC704\uCE58 : \uBD80\uC0B0\uAD11\uC5ED\uC2DC \uC0AC\uD558\uAD6C \uB2E4\uB300\uB3D9\\n\\n\uC124\uBA85
+    : \uC9C0\uBBFC\uC774 \uC0C8\uD574\uB97C \uB9DE\uC774\uD574 \uACE0\uD5A5\uC5D0
+    \uB4E4\uB7EC \uC18C\uC6D0\uC744 \uBE4C\uC5C8\uB358 \uBC14\uB2E4.\\n\uBA4B\uC9C4
+    \uD48D\uAD11\uC744 \uC990\uAE30\uBA70 \uC9C0\uBBFC\uC758 \uAE30\uC6B4\uC744 \uD568\uAED8
+    \uBC1B\uC744 \uC218 \uC788\uB294 \uACF3\uC774\uB2E4."
 --- !u!114 &555018386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1048,10 +1247,9 @@ MonoBehaviour:
   _useDegreeMethod: 0
   quitMenuPanel: {fileID: 784865900}
   markerInfoPanelRectTransform: {fileID: 148673251}
-  titles: []
-  photos: []
   title: {fileID: 238511214}
   photo: {fileID: 768587836}
+  info: {fileID: 146576492}
 --- !u!1 &656440108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,7 +1440,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: d2b664563ca6d07499cc7a77d8a9de4d, type: 3}
+  m_Texture: {fileID: 0}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1489,7 +1687,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 146576491}
   m_Father: {fileID: 148673251}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

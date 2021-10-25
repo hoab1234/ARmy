@@ -33,10 +33,12 @@
         [SerializeField]
         RectTransform markerInfoPanelRectTransform;
 
-        public string[] titles;
-        public Texture[] photos;
+        string[] titles;
+        Texture[] photos;
+        string[] infos; 
         public TMP_Text title;
         public GameObject photo;
+        public TMP_Text info;
 
         private Vector3 _origin;
         private Vector3 _mousePosition;
@@ -50,6 +52,7 @@
         {
             titles = GetComponent<SpawnOnMapGlobal>().titles;
             photos = GetComponent<SpawnOnMapGlobal>().photos;
+            infos = GetComponent<SpawnOnMapGlobal>().infos;
 
             if (null == _referenceCamera)
             {
@@ -136,6 +139,7 @@
                             MarkerInfo markerInfo = hitInfo.transform.GetComponent<MarkerInfo>();
                             photo.GetComponent<RawImage>().texture = photos[markerInfo.index];
                             title.text = titles[markerInfo.index];
+                            info.text = infos[markerInfo.index].Replace("\\n", "\n");
                             BtnEvent.instance.OpenMarkerInfoPanel();
                         }
                     }

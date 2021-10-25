@@ -16,42 +16,19 @@ public class ARFaceThreePoints : MonoBehaviour
     public Transform[] left;
     ARFaceManager aRFaceManager;
 
-    int index;
-    // public Text textIndex;
     int[,] targetPos = { { 205, 425 }, { 69, 333 }, { 159, 386 }, { 205, 425 }, { 9, 10 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 } };
-    //int[] targetPos = new int[] { 205, 425 };
     public int[,] testArr;
 
     int firstIndex;
 
-    // public int INDEX
-    // {
-    //     get { return index; }
-    //     set
-    //     {
-    //         index = value;
-    //         textIndex.text = index.ToString();
-    //     }
-    // }
-
-    // int maxIndex = 468;
-    // public void OnClickAddIndex()
-    // {
-    //     INDEX = (INDEX + 1) % maxIndex;
-    // }
-
-    // public void OnClickSubtractIndex()
-    // {
-    //     INDEX = (INDEX + maxIndex - 1) % maxIndex;
-    // }
-
     void Awake()
     {
+        firstIndex = 0;
+
         if(inst == null)
         {
             inst = this;
         }
-        //INDEX = 0;
         aRFaceManager = GetComponent<ARFaceManager>();
 
         for (int i = 0; i < right.Length; i++)
@@ -75,61 +52,9 @@ public class ARFaceThreePoints : MonoBehaviour
         aRFaceManager.facesChanged -= ChoiceSticker;
     }
 
-    // private void OnFaceChangedAll(ARFacesChangedEventArgs obj)
-    // {
-    //     for (int i = 0; i < obj.updated.Count; i++)
-    //     {
-    //         ARFace face = obj.updated[i];
-    //         Vector3 pos = face.vertices[INDEX];
-    //         pos = face.transform.TransformPoint(pos);
-    //         cubes[0].position = pos;
-    //     }
-    // }
-
-    // private void OnFaceChangedThree(ARFacesChangedEventArgs obj)
-    // {
-    //     NativeArray<ARCoreFaceRegionData> array = new NativeArray<ARCoreFaceRegionData>();
-    //     for (int i = 0; i < obj.updated.Count; i++)
-    //     {
-    //         ARCoreFaceSubsystem core = aRFaceManager.subsystem as ARCoreFaceSubsystem;
-    //         core.GetRegionPoses(obj.updated[i].trackableId, Allocator.Persistent, ref array);
-
-    //         for (int j = 0; j < array.Length; j++)
-    //         {
-    //             switch (array[j].region)
-    //             {
-    //                 case ARCoreFaceRegion.NoseTip:
-    //                     cubes[2].position = array[j].pose.position;
-    //                     break;
-    //                 case ARCoreFaceRegion.ForeheadLeft:
-    //                     cubes[1].position = array[j].pose.position;
-    //                     break;
-    //                 case ARCoreFaceRegion.ForeheadRight:
-    //                     cubes[0].position = array[j].pose.position;
-    //                     break;
-    //             }
-    //         }
-    //     }
-    // }
-
     void ChoiceSticker(ARFacesChangedEventArgs obj)
     {
-        //if (firstIndex == null ) return;
-
         ARFace face = obj.updated[0];
-        // textIndex.text = $"{face.transform.rotation.eulerAngles}";
-        /*
-        for (int j = 0; j < targetPos.GetLength(firstIndex); j++)
-        {
-            Vector3 pos = face.vertices[targetPos[firstIndex, j]];
-            Quaternion rot = face.transform.rotation;
-            pos = face.transform.TransformPoint(pos);
-            right[firstIndex].position = pos;
-            left[firstIndex].position = pos;
-            right[firstIndex].rotation = rot;
-            left[firstIndex].rotation = rot;
-        }
-        */
 
         Vector3 pos1 = face.vertices[targetPos[firstIndex, 0]];
         Quaternion rot1 = face.transform.rotation;

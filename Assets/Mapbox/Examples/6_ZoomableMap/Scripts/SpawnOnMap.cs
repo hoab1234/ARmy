@@ -32,6 +32,7 @@
 
         public Texture[] photos;
 		public string[] titles;
+        public string[] infos;
 
         List<GameObject> _spawnedObjects;
 
