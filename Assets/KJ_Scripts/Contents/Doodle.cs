@@ -67,7 +67,7 @@ public class Doodle : MonoBehaviour
     public Texture RandomDoodleMat()
     {
         int randomInt = Random.Range(0, textures.Length);
-        print(randomInt);
+       // print(randomInt);
 
         return matDic[randomInt];
 
