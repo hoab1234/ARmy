@@ -4,8 +4,18 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 public class ARCamFacingDir : MonoBehaviour
 {
+
+    public static ARCamFacingDir inst;
+
+    void Awake(){
+        if(inst == null)
+        {
+            inst = this;
+        }
+    }
+
     [SerializeField]
-    ARCameraManager m_CameraManager;
+    public ARCameraManager m_CameraManager;
 
     [SerializeField]
     GameObject m_ARCoreExtensions;
@@ -32,6 +42,12 @@ public class ARCamFacingDir : MonoBehaviour
     ARFaceManager m_ARFaceManager;
 
     ARFaceThreePoints m_ARFaceThreePoints;
+
+    Renderer[] renderers;
+
+    public void SetRenderers(Renderer[] _renderers){
+        renderers = _renderers;
+    }
     void Start()
     {
 
@@ -49,6 +65,8 @@ public class ARCamFacingDir : MonoBehaviour
         m_ARFaceManager = GetComponent<ARFaceManager>();
 
         m_ARFaceThreePoints = GetComponent<ARFaceThreePoints>();
+
+        
     }
 
     bool isFacingDirWorld = true;
@@ -86,16 +104,27 @@ public class ARCamFacingDir : MonoBehaviour
     }
 
     GameObject prefab;
-    public void HidePrefab(){
+    public void HidePrefab()
+    {
         prefab = GameObject.FindGameObjectWithTag("ARMYROAD");
-        if(prefab == null) return;
+        if (prefab == null) return;
         print(prefab.name);
-        prefab.SetActive(false);
-    }
-    public void ShowPrefab(){
-        if(prefab == null) return;
-        prefab.SetActive(true);
         
+        foreach(var _renderer in renderers)
+        {
+            _renderer.enabled = false;
+        }
+        //prefab.SetActive(false);
+    }
+    public void ShowPrefab()
+    {
+        if (prefab == null) return;
+         //prefab.SetActive(true);
+        foreach(var _renderer in renderers)
+        {
+            _renderer.enabled = true;
+        }
+
         prefab = GameObject.FindGameObjectWithTag("ARMYROAD");
         print(prefab.name);
     }
@@ -130,15 +159,24 @@ public class ARCamFacingDir : MonoBehaviour
         {
             m_ARFaceManager.enabled = false;
             m_ARFaceThreePoints.enabled = false;
-            
+
         }
     }
 
-    public void CheckFacingDir(){
-        if( m_CameraManager.requestedFacingDirection == CameraFacingDirection.User)
+    public void CheckFacingDir()
+    {
+        if (m_CameraManager.requestedFacingDirection == CameraFacingDirection.User)
         {
-              ToWorld();
+            ToWorld();
             isFacingDirWorld = true;
+        }
+    }
+    public void UploadWhenFacingUser()
+    {
+        if (m_CameraManager.requestedFacingDirection == CameraFacingDirection.User)
+        {
+            FacingDirChange();
+
         }
     }
 }
