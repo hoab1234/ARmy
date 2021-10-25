@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
 using DG.Tweening;
 public class Doodle : MonoBehaviour
 {
@@ -36,13 +37,36 @@ public class Doodle : MonoBehaviour
         }
         //mesh = GetComponentInChildren<MeshRenderer>();
     }
+    Renderer[] renderers;
     private void Start()
     {
         isMoving = false;
         mesh.material.mainTexture = RandomDoodleMat();
         StartCoroutine(ARDoodlePosReset());
+      
+            renderers = GetComponentsInChildren<Renderer>();
+           
+        
     }
+    void Update()
+    {
 
+        if (ARCamFacingDir.inst.m_CameraManager.requestedFacingDirection == CameraFacingDirection.World)
+        {
+            foreach (var _renderers in renderers)
+            {
+                _renderers.enabled = true;
+            }
+        }
+
+        if (ARCamFacingDir.inst.m_CameraManager.requestedFacingDirection == CameraFacingDirection.User)
+        {
+            foreach (var _renderers in renderers)
+            {
+                _renderers.enabled = false;
+            }
+        }
+    }
     IEnumerator ARDoodlePosReset()
     {
         while (true)
@@ -67,7 +91,7 @@ public class Doodle : MonoBehaviour
     public Texture RandomDoodleMat()
     {
         int randomInt = Random.Range(0, textures.Length);
-       // print(randomInt);
+        // print(randomInt);
 
         return matDic[randomInt];
 
