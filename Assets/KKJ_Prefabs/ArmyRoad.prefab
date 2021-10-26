@@ -38,17 +38,61 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4526867494428772695}
     m_Modifications:
+    - target: {fileID: 257596082, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.46459085
+      objectReference: {fileID: 0}
+    - target: {fileID: 257596082, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.46459085
+      objectReference: {fileID: 0}
+    - target: {fileID: 257596082, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.46459085
+      objectReference: {fileID: 0}
+    - target: {fileID: 257596082, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 257596082, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 257596082, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 257596082, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 257596082, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 257596082, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 257596082, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 257596082, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 3824858283069551248, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3824858283069551249, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3824858283069551255, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8157180587111809514, guid: 3db9de834c61a0f44a1225ef26675f71, type: 3}
       propertyPath: m_RootOrder
