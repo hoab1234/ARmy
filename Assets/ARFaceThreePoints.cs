@@ -16,7 +16,7 @@ public class ARFaceThreePoints : MonoBehaviour
     public Transform[] left;
     ARFaceManager aRFaceManager;
 
-    int[,] targetPos = { { 205, 425 }, { 69, 333 }, { 159, 386 }, { 205, 425 }, { 9, 10 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 }, { 205, 425 } };
+    int[,] targetPos = { { 50, 280 }, { 50, 280 }, { 159, 386 }, { 50, 280 }, { 9, 10 }, { 50, 280 }, { 50, 280 }, { 50, 280 }, { 50, 347 }, { 50, 280 }, { 50, 280 }, { 50, 280 }, { 50, 280 }, { 50, 280 } };
     public int[,] testArr;
 
     int firstIndex;
