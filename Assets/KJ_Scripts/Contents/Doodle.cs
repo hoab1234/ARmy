@@ -42,7 +42,7 @@ public class Doodle : MonoBehaviour
     {
         isMoving = false;
         mesh.material.mainTexture = RandomDoodleMat();
-        StartCoroutine(ARDoodlePosReset());
+        //StartCoroutine(ARDoodlePosReset());
       
             renderers = GetComponentsInChildren<Renderer>();
            
@@ -81,7 +81,7 @@ public class Doodle : MonoBehaviour
                     0.5f <= temp.y || temp.y <= -0.5f ||
                     0.5f <= temp.z || temp.z <= -0.5f)
                 {
-                    transform.localPosition = Vector3.zero;
+                    transform.position = Vector3.zero;
                 }
 
 
