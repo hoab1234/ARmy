@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
 using System;
-
+using UnityEngine.XR.ARFoundation;
 public class VideoToogleBtn : MonoBehaviour
 {
     VideoPlayer vp;
@@ -14,6 +14,25 @@ public class VideoToogleBtn : MonoBehaviour
     bool isFocus = false;
     public bool xIconClicked = false;
 
+  //  public Canvas PlayPauseUi;
+    // void Update()
+    // {
+    //     if (ARCamFacingDir.inst.m_CameraManager.requestedFacingDirection == CameraFacingDirection.World)
+    //     {
+
+
+    //         PlayPauseUi.enabled = true;
+
+    //     }
+
+    //     if (ARCamFacingDir.inst.m_CameraManager.requestedFacingDirection == CameraFacingDirection.User)
+    //     {
+
+    //         PlayPauseUi.enabled = false;
+
+
+    //     }
+    // }
     /* public enum State
 {
 None,
@@ -25,6 +44,10 @@ Pause
     {
         isFocus = state;
     }*/
+     private void Awake() {
+       // PlayPauseUi = GetComponentInChildren<Canvas>();
+    }
+    
     void Start()
     {
         vp = GetComponentInChildren<VideoPlayer>();
@@ -32,19 +55,20 @@ Pause
         //vpState = State.None;
         if (PlayBtn != null) PlayBtn.SetActive(true);
         if (PauseBtn != null) PauseBtn.SetActive(false);
+        //PlayPauseUi = GetComponentInChildren<Canvas>();
         //isFocus = false;
         //StartCoroutine("BtnToggle");
     }
-    
+
     public void SetState(bool state)
     {
         if (state)
         {
-           // vpState = State.Play;
+            // vpState = State.Play;
         }
         else
         {
-           // vpState = State.Pause;
+            // vpState = State.Pause;
         }
     }
     private void checkOver()
@@ -52,7 +76,7 @@ Pause
         long playerCurrentFrame = vp.frame;
         long playerFrameCount = Convert.ToInt64(vp.frameCount);
 
-        if (playerCurrentFrame < playerFrameCount-1)
+        if (playerCurrentFrame < playerFrameCount - 1)
         {
             //print("VIDEO IS PLAYING");
             //print("curreent freme----" + playerCurrentFrame);
@@ -62,7 +86,7 @@ Pause
         {
             print("VIDEO IS OVER");
             //Do w.e you want to do for when the video is done playing.
-            if(!xIconClicked)
+            if (!xIconClicked)
             {
                 PlayBtn.SetActive(true);
                 playAfterOver = true;
@@ -74,28 +98,28 @@ Pause
     }
     public void Play()
     {
-        
-            vp.Play();
+
+        vp.Play();
         print("video play");
-           // vpState = State.Play;
-            PlayBtn.SetActive(false);
-            PauseBtn.SetActive(false);
-            InvokeRepeating("checkOver", .1f, .1f);
+        // vpState = State.Play;
+        PlayBtn.SetActive(false);
+        PauseBtn.SetActive(false);
+        InvokeRepeating("checkOver", .1f, .1f);
 
     }
     bool playAfterOver = false;
     public void Pause()
     {
-            playAfterOver = false;
-            vp.Pause();
+        playAfterOver = false;
+        vp.Pause();
         print("video pause");
         //vpState = State.Pause;
         PlayBtn.SetActive(false);
-        if (! playAfterOver)
+        if (!playAfterOver)
         {
             PauseBtn.SetActive(true);
         }
-        
+
     }
 
 }

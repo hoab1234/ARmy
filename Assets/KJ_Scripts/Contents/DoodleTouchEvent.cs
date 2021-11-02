@@ -161,12 +161,12 @@ public class DoodleTouchEvent : MonoBehaviour
             videotoogleBtn.xIconClicked = true;
         }
 
-      /*  tempobj.GetComponent<Doodle>().GoBack();
-        tempobj.GetComponent<Doodle>().EnableToggleBillborad(false);*/
+      // tempobj.GetComponent<Doodle>().GoBack();
+      //  tempobj.GetComponent<Doodle>().EnableToggleBillborad(false);
 
 #if UNITY_ANDROID
-        doodle.GetComponent<Doodle>().GoBack();
-        doodle.GetComponent<Doodle>().EnableToggleBillborad(false);
+         doodle.GetComponent<Doodle>().GoBack();
+         doodle.GetComponent<Doodle>().EnableToggleBillborad(false);
 #endif
     }
 
